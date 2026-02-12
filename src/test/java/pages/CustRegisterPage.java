@@ -1,142 +1,225 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
 import base.BasePage;
-import utilities.WaitUtils;
+import utilities.LoggerUtil;
 
 public class CustRegisterPage extends BasePage {
-	private WaitUtils wait;
-	
-	private By navCustreg = By.xpath("//p[normalize-space()='Customer Management']");
-	private By custReg = By.xpath("//p[normalize-space()='Customer Registration']");
-	private By addCustregBtn = By.xpath("//div[contains(text(),'Add Customer Registration')]");
-	private By legalStatus = By.cssSelector("input[role='combobox']");
-	private By formVisible = By.xpath("//label[@class='text-sm mb-1 block text-gray-600']");
-	private By fName = By.cssSelector("input[aria-label='First Name']");
-	private By mName = By.cssSelector("input[aria-label='Middle Name']");
-	private By lName = By.cssSelector("input[aria-label='Last Name']");
-	private By fNameLocaL = By.xpath("//input[@name='firstNameLocal']");
-	private By mNameLocal = By.xpath("//input[@name='middleNameLocal']");
-	private By lNameLocal = By.xpath("//input[@name='lastNameLocal']");
-	private By maidenName = By.cssSelector("input[aria-label='Maiden Name']");
-	private By birthCntry = By.xpath("//input[@aria-label='Birth Country']");
-	private By selectGender = By.xpath("//input[@aria-label='Gender']");
-	private By birthDateInput = By.cssSelector("input[data-testid='eng-date-picker']");
-	private By monthDropdown = By.xpath("//select[@name='months']");
-	private By yearDropdown = By.xpath("//select[@name='years']");
-	
-	
 
+	// =================================================
+	// Check form visible or not Locators
+	// =================================================
+
+	private By formVisibleLocator = By.xpath("//label[@class='text-sm mb-1 block text-gray-600']");
+
+	// =================================================
+	// Personal Details Locators
+	// =================================================
+	private By legalStatusLocator = By.cssSelector("input[role='combobox']");
+	private By fNameLocator = By.cssSelector("input[aria-label='First Name']");
+	private By mNameLocator = By.cssSelector("input[aria-label='Middle Name']");
+	private By lNameLocator = By.cssSelector("input[aria-label='Last Name']");
+	private By fNameLocalLocator = By.xpath("//input[@name='firstNameLocal']");
+	private By mNameLocalLocator = By.xpath("//input[@name='middleNameLocal']");
+	private By lNameLocalLocator = By.xpath("//input[@name='lastNameLocal']");
+	private By maidenNameLocator = By.cssSelector("input[aria-label='Maiden Name']");
+	private By foreignCheckboxLocator = By.xpath("//input[@name='isForeign']");
+	private By isPEPCheckboxLocator = By.xpath("//input[@name='isPep']");
+	private By foreignResidentLocator = By.xpath("//input[@aria-label='Foreign Residential Country']");
+	private By pepLocator = By.xpath("//input[@aria-label='PEP Category']");
+	private By genderLocator = By.xpath("//input[@aria-label='Gender']");
+	private By maritalStatusLocator = By.xpath("//input[@aria-label='Marital Status']");
+	private By religionLocator = By.xpath("//input[@aria-label='Religion']");
+	private By educationLocator = By.xpath("//input[@aria-label='Education']");
+	private By motherlanguageLocator = By.xpath("//input[@aria-label='Mother Language']");
+	private By prreferredCommunicationLocator = By.xpath("//input[@aria-label='Preferred Communication Language']");
+
+	// =================================================
+	// Birth Details Locators
+	// =================================================
+	private By birthCountryLocator = By.xpath("//input[@aria-label='Birth Country']");
+	private By birthAddressNoneLocalCustomerLocator = By.name("birthAddressForNoneLocalCustomer");
+	private By birthDateInputLocator = By.cssSelector("input[data-testid='eng-date-picker']");
+	private By monthDropdownLocator = By.xpath("//select[@name='months']");
+	private By yearDropdownLocator = By.xpath("//select[@name='years']");
+
+	// =================================================
+	// Employment Locators
+	// =================================================
+	private By isEmployeeYesLocator = By.xpath("//input[@name='isHomeEmployee' and @value='true']");
+	private By isEmployeeNoLocator = By.xpath("//input[@name='isHomeEmployee' and @value='false']");
+	private By nextBtnLocator = By.xpath("//div[normalize-space()='Proceed']");
+	private By custIdentityLocator = By.xpath("//p[normalize-space()='Customer Identity']");
+
+	// =================================================
+	// Constructor
+	// =================================================
 	public CustRegisterPage(WebDriver driver) {
 		super(driver);
-		this.wait = new WaitUtils(driver);
-		
-	}
-	
-	public void clicknavReg(){
-		 
-		click(wait.waitForElementToBeClickable(navCustreg));
-		
-		
-	}
-	public void clickcustReg(){
-		click(wait.waitForElementToBeClickable(custReg));
-		
-		
-	}
-	public void clickAddCust() {
-		click(wait.waitForElementToBeClickable(addCustregBtn));
-	}
-	
-	public void chooseLegalstatus(String legalStats) {
-		
-		WebElement legalstat = wait.waitForElementToBeClickable(legalStatus);
-		legalstat.click();
-		legalstat.sendKeys(legalStats);
-		legalstat.sendKeys(Keys.ENTER);
-	}
-	
-	public void isEmployee(String option) {
-	    String value = option.equalsIgnoreCase("yes") ? "true" : "false";
-
-	    By radio = By.xpath("//input[@name='isHomeEmployee' and @value='" + value + "']");
-	    driver.findElement(radio).click();
 	}
 
-	public void enterFirstname (String fistName) {
-		typeText(wait.waitForElementToBeClickable(fName), fistName);
-	}
-	
-	public void enterMiddlename (String MiddleName) {
-		typeText(wait.waitForElementToBeClickable(mName), MiddleName);
-	}
-	
-	public void enterLastname (String lastName) {
-		typeText(wait.waitForElementToBeClickable(lName), lastName);
-	}
-	
-	public void enterFirstnameLocal (String fistNameLocal) {
-		typeText(wait.waitForElementToBeClickable(fNameLocaL), fistNameLocal);
-	}
-	
-	public void enterMiddlenameLocal (String MiddleNameLocal) {
-		typeText(wait.waitForElementToBeClickable(mNameLocal), MiddleNameLocal);
-	}
-	
-	public void enterLastnamelocal (String lastNameLocal) {
-		typeText(wait.waitForElementToBeClickable(lNameLocal), lastNameLocal);
-	}
-	
-	public void enterMaidenName (String maidenname) {
-		typeText(wait.waitForElementToBeClickable(maidenName), maidenname);
-	}
-	
-		
-	public void selectBirthDate(String year, String day , String month ) {
-	    wait.waitForElementToBeClickable(birthDateInput).click();
+	// =================================================
+	// Employment Methods
+	// =================================================
+	public void isEmployee(String optionValue) {
+		LoggerUtil.info("Selecting Is Employee option: " + optionValue);
 
-	    Select years = new Select(driver.findElement(yearDropdown));
-	    years.selectByVisibleText(year);
-	    
-	    Select mnth = new Select(driver.findElement(monthDropdown));
-	    mnth.selectByVisibleText(month);
-
-	    By dayLocator = By.xpath(
-	            "//button[@name='day' and normalize-space()='" + day + "' and not(@disabled)]"
-	    );
-	    wait.waitForElementToBeClickable(dayLocator).click();
-	}
-	
-	public void enterBirthCountry(String birthCountry) {
-		WebElement bc = wait.waitForElementToBeClickable(birthCntry);
-		bc.click();
-		bc.sendKeys(birthCountry);
-		bc.sendKeys(Keys.ENTER);	
-	}
-	
-	public void enterGender(String gender) {
-		WebElement gen = wait.waitForElementToBeClickable(selectGender);
-		gen.click();
-		if (gender.equalsIgnoreCase("Male")) {
-			gen.sendKeys(gender);
-			gen.sendKeys(Keys.ARROW_DOWN);
-			gen.sendKeys(Keys.ENTER);
-		}else {
-			gen.sendKeys(gender);
-			gen.sendKeys(Keys.ENTER);
+		if (optionValue.equalsIgnoreCase("yes")) {
+			LoggerUtil.info("Clicking 'Yes' for Is Employee");
+			click(isEmployeeYesLocator);
+			assertTrueCondition(isSelected(isEmployeeYesLocator), "'Yes' Employee option not selected");
+		} else if (optionValue.equalsIgnoreCase("no")) {
+			LoggerUtil.info("Clicking 'No' for Is Employee");
+			click(isEmployeeNoLocator);
+			assertTrueCondition(isSelected(isEmployeeNoLocator), "'No' Employee option not selected");
+		} else {
+			throw new IllegalArgumentException("Invalid value for Is Employee. Use 'Yes' or 'No'");
 		}
-			
-		
 	}
-	
-	public boolean visibleForm() {
-        return wait.waitForElementToBeVisible(formVisible).isDisplayed();
-    }
 
+	// =================================================
+	// Personal Details Methods
+	// =================================================
+	public void chooseLegalStatus(String legalStatusValue) {
+		LoggerUtil.info("Selecting '" + legalStatusValue + "' from Legal Status dropdown");
+		selectFromDropdown(legalStatusLocator, legalStatusValue);
+	}
+
+	public void enterCustomerName(String firstNameValue, String middleNameValue, String lastNameValue) {
+		LoggerUtil.info("Entering Customer Name - First: " + firstNameValue +
+				", Middle: " + middleNameValue + ", Last: " + lastNameValue);
+
+		typeText(fNameLocator, firstNameValue);
+		typeText(mNameLocator, middleNameValue);
+		typeText(lNameLocator, lastNameValue);
+
+		assertValueEquals(fNameLocator, firstNameValue, "First name not entered correctly");
+		assertValueEquals(mNameLocator, middleNameValue, "Middle name not entered correctly");
+		assertValueEquals(lNameLocator, lastNameValue, "Last name not entered correctly");
+	}
+
+	public void enterCustomerNameLocal(String firstNameLocalValue, String middleNameLocalValue,
+			String lastNameLocalValue) {
+
+		LoggerUtil.info("Entering Customer Local Name - First: " + firstNameLocalValue +
+				", Middle: " + middleNameLocalValue + ", Last: " + lastNameLocalValue);
+
+		typeText(fNameLocalLocator, firstNameLocalValue);
+		typeText(mNameLocalLocator, middleNameLocalValue);
+		typeText(lNameLocalLocator, lastNameLocalValue);
+
+		assertValueEquals(fNameLocalLocator, firstNameLocalValue, "Local First name not entered correctly");
+		assertValueEquals(mNameLocalLocator, middleNameLocalValue, "Local Middle name not entered correctly");
+		assertValueEquals(lNameLocalLocator, lastNameLocalValue, "Local Last name not entered correctly");
+	}
+
+	public void enterMaidenName(String maidenNameValue) {
+		LoggerUtil.info("Typing '" + maidenNameValue + "' into Maiden Name field");
+		typeText(maidenNameLocator, maidenNameValue);
+		assertValueEquals(maidenNameLocator, maidenNameValue, "Maiden name not entered correctly");
+	}
+
+	public void selectIsForeign(boolean isForeignValue, String foreignResidentCountryValue) {
+		LoggerUtil.info((isForeignValue ? "Checking" : "Unchecking") + " 'Is Foreign Resident' checkbox");
+		if (isForeignValue != isSelected(foreignCheckboxLocator)) {
+			click(foreignCheckboxLocator);
+		}
+
+		if (isForeignValue) {
+			LoggerUtil.info("Selecting '" + foreignResidentCountryValue + "' from Foreign Resident Country dropdown");
+			selectFromDropdown(foreignResidentLocator, foreignResidentCountryValue);
+		}
+	}
+
+	public void selectIsPEP(boolean isPEPValue, String pepCategoryValue) {
+		LoggerUtil.info((isPEPValue ? "Checking" : "Unchecking") + " 'Is PEP' checkbox");
+		if (isPEPValue != isSelected(isPEPCheckboxLocator)) {
+			click(isPEPCheckboxLocator);
+		}
+
+		if (isPEPValue) {
+			LoggerUtil.info("Selecting '" + pepCategoryValue + "' from PEP Category dropdown");
+			selectFromDropdown(pepLocator, pepCategoryValue);
+		}
+	}
+
+	public void selectGender(String genderValue) {
+		LoggerUtil.info("Selecting '" + genderValue + "' from Gender dropdown");
+		selectFromGenderDropdown(genderLocator, genderValue);
+	}
+
+	public void selectMaritalStatus(String maritalStatusValue) {
+		LoggerUtil.info("Selecting '" + maritalStatusValue + "' from Marital Status dropdown");
+		selectFromDropdown(maritalStatusLocator, maritalStatusValue);
+	}
+
+	public void selectReligion(String religionValue) {
+		LoggerUtil.info("Selecting '" + religionValue + "' from Religion dropdown");
+		selectFromDropdown(religionLocator, religionValue);
+	}
+
+	public void selectEducation(String educationValue) {
+		LoggerUtil.info("Selecting '" + educationValue + "' from Education Level dropdown");
+		selectFromGenderDropdown(educationLocator, educationValue);
+	}
+
+	public void selectMotherLanguage(String MotherLanguageValue) {
+		LoggerUtil.info("Selecting '" + MotherLanguageValue + "' from Mother Language dropdown");
+		selectFromDropdown(motherlanguageLocator, MotherLanguageValue);
+	}
+
+	public void selectPreferredCommunicationLanguage(String preferredLanguageValue) {
+		LoggerUtil.info("Selecting '" + preferredLanguageValue + "' from Preferred Communication Language dropdown");
+		selectFromDropdown(prreferredCommunicationLocator, preferredLanguageValue);
+	}
+
+	// =================================================
+	// Birth Details Methods
+	// =================================================
+	public void selectBirthDate(String yearValue, String monthValue, String dayValue) {
+		LoggerUtil.info("Selecting Date of Birth - Year: " + yearValue +
+				", Month: " + monthValue + ", Day: " + dayValue);
+
+		By dayLocator = By.xpath("//button[@name='day' and normalize-space()='" + dayValue + "' and not(@disabled)]");
+		selectDate(birthDateInputLocator, yearDropdownLocator, yearValue,
+				monthDropdownLocator, monthValue, dayLocator);
+
+		assertFalseCondition(getAttributeValue(birthDateInputLocator, "value").isEmpty(),
+				"Birth date was not selected");
+	}
+
+	public void enterBirthCountry(String birthCountryValue) {
+		LoggerUtil.info("Selecting '" + birthCountryValue + "' from Birth Country dropdown");
+		selectFromDropdown(birthCountryLocator, birthCountryValue);
+	}
+
+	public void enterBirthAddressIfApplicable(String addressValue) {
+		if (addressValue != null && !addressValue.trim().isEmpty()) {
+			LoggerUtil.info("Typing '" + addressValue + "' into Birth Address for Non-local Customer field");
+			typeText(birthAddressNoneLocalCustomerLocator, addressValue);
+			assertValueEquals(birthAddressNoneLocalCustomerLocator, addressValue,
+					"Birth address not entered correctly");
+		} else {
+			LoggerUtil.info("No Birth Address provided for Non-local Customer");
+		}
+	}
+
+	public void clickNextButton() {
+		LoggerUtil.info("Clicking 'Next' button");
+		click(nextBtnLocator);
+	}
+
+	public void openIdentityformPage() {
+		LoggerUtil.info("Clicking 'Customer Identity' step");
+		click(custIdentityLocator);
+	}
+
+	// =================================================
+	// Form Validation
+	// =================================================
+	public boolean isFormVisible() {
+		LoggerUtil.info("Checking if Customer Registration form is visible");
+		return wait.waitForElementToBeVisible(formVisibleLocator).isDisplayed();
+	}
 }

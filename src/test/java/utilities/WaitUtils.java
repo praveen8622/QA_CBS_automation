@@ -24,5 +24,6 @@ public class WaitUtils {
 	public void waitForAlert() {
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
+	
 }
 
