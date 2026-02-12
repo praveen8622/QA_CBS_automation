@@ -1,0 +1,150 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import base.BasePage;
+import utilities.LoggerUtil;
+
+public class CustAddressPage extends BasePage {
+
+    // ================================
+    // Locators
+    // ================================
+    private By addAddressLocator = By.xpath("//button[@title='Add']");
+
+    private By addressTypeContainerLocator = By
+            .xpath("//input[@name='addressTypeId']/ancestor::div[contains(@class, 'container')]");
+    private By addressTypeInputLocator = By.xpath(
+            "//input[@name='addressTypeId']/ancestor::div[contains(@class, 'container')]//input[not(@type='hidden')]");
+
+    private By stateContainerLocator = By
+            .xpath("//input[@name='stateId']/ancestor::div[contains(@class, 'container')]");
+    private By stateInputLocator = By
+            .xpath("//input[@name='stateId']/ancestor::div[contains(@class, 'container')]//input[not(@type='hidden')]");
+
+    private By districtContainerLocator = By
+            .xpath("//input[@name='districtId']/ancestor::div[contains(@class, 'container')]");
+    private By districtInputLocator = By.xpath(
+            "//input[@name='districtId']/ancestor::div[contains(@class, 'container')]//input[not(@type='hidden')]");
+
+    private By localBodyContainerLocator = By
+            .xpath("//input[@name='townshipId']/ancestor::div[contains(@class, 'container')]");
+    private By localBodyInputLocator = By.xpath(
+            "//input[@name='townshipId']/ancestor::div[contains(@class, 'container')]//input[not(@type='hidden')]");
+
+    private By postalCodeInputLocator = By.name("postalCode");
+    private By streetInputLocator = By.name("street");
+    private By wardNoInputLocator = By.name("wardNo");
+    private By houseNoInputLocator = By.name("houseNo");
+    private By latitudeInputLocator = By.name("latitude");
+    private By longitudeInputLocator = By.name("longitude");
+
+    private By openMapButtonLocator = By.xpath("//button[@title='Open Map']");
+    private By imageUploadInputLocator = By.cssSelector("input[type='file']");
+
+    private By exitButtonLocator = By.xpath("//button[@title='Exit']");
+    private By resetButtonLocator = By.xpath("//button[.//div[text()='Reset']]");
+    private By saveButtonLocator = By.xpath("//button[.//div[text()='Save']]");
+    private By nextButtonLocator = By.xpath("//button[@title='Next Step']");
+    private By highProfilevConnLocator = By.xpath("//p[normalize-space()='High Profile Connections']");
+
+    // ================================
+    // Constructor
+    // ================================
+    public CustAddressPage(WebDriver driver) {
+        super(driver);
+    }
+
+    // ================================
+    // Actions
+    // ================================
+    public void openAddAddressForm() {
+        LoggerUtil.info("Clicking 'Add' button to open Address Form");
+        click(addAddressLocator);
+    }
+
+    public void selectAddressType(String value) {
+        LoggerUtil.info("Selecting '" + value + "' from Address Type dropdown");
+        selectFromReactSelect(addressTypeContainerLocator, addressTypeInputLocator, value);
+    }
+
+    public void selectState(String value) {
+        LoggerUtil.info("Selecting '" + value + "' from State dropdown");
+        selectFromReactSelect(stateContainerLocator, stateInputLocator, value);
+    }
+
+    public void selectDistrict(String value) {
+        LoggerUtil.info("Selecting '" + value + "' from District dropdown");
+        selectFromReactSelect(districtContainerLocator, districtInputLocator, value);
+    }
+
+    public void selectLocalBody(String value) {
+        LoggerUtil.info("Selecting '" + value + "' from Local Body dropdown");
+        selectFromReactSelect(localBodyContainerLocator, localBodyInputLocator, value);
+    }
+
+    public void enterPostalCode(String postalCode) {
+        LoggerUtil.info("Typing '" + postalCode + "' into Postal Code field");
+        typeText(postalCodeInputLocator, postalCode);
+    }
+
+    public void enterStreet(String street) {
+        LoggerUtil.info("Typing '" + street + "' into Street field");
+        typeText(streetInputLocator, street);
+    }
+
+    public void enterWardNo(String wardNo) {
+        LoggerUtil.info("Typing '" + wardNo + "' into Ward No field");
+        typeText(wardNoInputLocator, wardNo);
+    }
+
+    public void enterHouseNo(String houseNo) {
+        LoggerUtil.info("Typing '" + houseNo + "' into House No field");
+        typeText(houseNoInputLocator, houseNo);
+    }
+
+    public void clickOpenMap() {
+        LoggerUtil.info("Clicking 'Open Map' button");
+        click(openMapButtonLocator);
+    }
+
+    public void enterLatitude(String latitude) {
+        LoggerUtil.info("Typing '" + latitude + "' into Latitude field");
+        typeText(latitudeInputLocator, latitude);
+    }
+
+    public void enterLongitude(String longitude) {
+        LoggerUtil.info("Typing '" + longitude + "' into Longitude field");
+        typeText(longitudeInputLocator, longitude);
+    }
+
+    public void uploadAddressDocument(String filePath) {
+        LoggerUtil.info("Uploading Address Document from path: " + filePath);
+        driver.findElement(imageUploadInputLocator).sendKeys(filePath);
+    }
+
+    public void clickSave() {
+        LoggerUtil.info("Clicking 'Save' button on Address page");
+        click(saveButtonLocator);
+    }
+
+    public void clickReset() {
+        LoggerUtil.info("Clicking 'Reset' button on Address page");
+        click(resetButtonLocator);
+    }
+
+    public void clickExit() {
+        LoggerUtil.info("Clicking 'Exit' button on Address page");
+        click(exitButtonLocator);
+    }
+
+    public void clickNext() {
+        LoggerUtil.info("Clicking 'Next' button on Address page");
+        click(nextButtonLocator);
+    }
+
+    public void openHighProfilevConnformPage() {
+        LoggerUtil.info("Clicking 'High Profilev Conn' step");
+        click(highProfilevConnLocator);
+    }
+}
