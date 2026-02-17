@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import base.BaseTestSequential;
 import pages.CustAddressPage;
+import pages.CustCashFlowPage;
 import pages.CustCommunicationPage;
 import pages.CustDocument;
 import pages.CustHighProfilePage;
@@ -23,6 +24,7 @@ public class CusRegTest extends BaseTestSequential {
 	private CustAddressPage addressPage;
 	private CustHighProfilePage highProfilePage;
 	private CustTransactionPage transactionPage;
+	private CustCashFlowPage cashFlowPage;
 	private HomePage homePage;
 
 	@BeforeClass
@@ -34,6 +36,7 @@ public class CusRegTest extends BaseTestSequential {
 		addressPage = new CustAddressPage(driver);
 		highProfilePage = new CustHighProfilePage(driver);
 		transactionPage = new CustTransactionPage(driver);
+		cashFlowPage = new CustCashFlowPage(driver);
 		homePage = new HomePage(driver);
 	}
 
@@ -73,7 +76,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 2)
 	public void verifyIdentityDetails() throws InterruptedException {
-		// homePage.searchAndEditDraftCustomer("Ram");
+		// homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		// open and fill identity form
 		LoggerUtil.info("Identity Details test started");
@@ -97,7 +100,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 3)
 	public void verifyCommunicationDetails() throws InterruptedException {
-		// homePage.searchAndEditDraftCustomer("Ram");
+		// homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		// open and fill customer communication page
 		LoggerUtil.info("Communication Details test started");
@@ -120,7 +123,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 4)
 	public void verifyDocumentDetails() throws InterruptedException {
-		// homePage.searchAndEditDraftCustomer("Ram");
+		// homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		// open and fill customer document page
 		LoggerUtil.info("Document Details test started");
@@ -133,7 +136,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 5)
 	public void verifyAddressDetails() throws InterruptedException {
-		// homePage.searchAndEditDraftCustomer("Ram");
+		// homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		LoggerUtil.info("Address Details test started");
 
@@ -169,7 +172,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 6)
 	public void verifyHighProfileDetails() throws InterruptedException {
-		// homePage.searchAndEditDraftCustomer("Ram");
+		// homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		LoggerUtil.info("High Profile Details test started");
 
@@ -211,7 +214,7 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 7)
 	public void verifyTransactionDetails() throws InterruptedException {
-		// homePage.searchAndEditDraftCustomer("Ram");
+		// homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		LoggerUtil.info("Transaction Details test started");
 
@@ -223,6 +226,21 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(3000);
 		transactionPage.clickSave();
 		Thread.sleep(3000);
+	}
 
+	@Test(priority = 8)
+	public void verifyCashFlowDetails() throws InterruptedException {
+		LoggerUtil.info("Cash Flow Details test started");
+		homePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+
+		Thread.sleep(3000);
+		cashFlowPage.navigateToCashFlowTab();
+		Thread.sleep(3000);
+		cashFlowPage.clickAdd();
+		Thread.sleep(3000);
+		cashFlowPage.enterCashFlowDetails("Income", "Monthly", "10000");
+		Thread.sleep(2000);
+		cashFlowPage.clickSave();
+		Thread.sleep(3000);
 	}
 }
