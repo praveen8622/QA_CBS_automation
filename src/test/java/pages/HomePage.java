@@ -14,6 +14,7 @@ public class HomePage extends BasePage {
     private By custRegLocator = By.xpath("//p[normalize-space()='Customer Registration']");
     private By addCustregBtnLocator = By.xpath("//div[contains(text(),'Add Customer Registration')]");
     private By loadBtnLocator = By.xpath("//button[@title='Load Data']");
+    private By nextBtnLocator = By.xpath("//form//button[@type='submit' and .//div[normalize-space()='Next Step']]");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -55,6 +56,7 @@ public class HomePage extends BasePage {
         LoggerUtil.info("Clicking 'Edit' button for customer: " + customerName);
         By editBtnLocator = By.xpath("//tr[td[normalize-space()='" + customerName + "']]//button[@title='Edit']");
         click(editBtnLocator);
+
     }
 
     public void searchAndEditDraftCustomer(String customerName) {
@@ -63,6 +65,8 @@ public class HomePage extends BasePage {
         selectStatus("Draft");
         click(loadBtnLocator);
         clickEditAction(customerName);
+        click(nextBtnLocator);
+
     }
 
     public void clickViewAction(String customerName) {

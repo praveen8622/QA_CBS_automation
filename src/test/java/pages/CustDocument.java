@@ -13,12 +13,13 @@ public class CustDocument extends BasePage {
 
 	}
 
-	private By documentTypeDropdownLocator = By.xpath("//input[@aria-label='Document Type']");
-	private By documentTitleLocator = By.xpath("//input[@name='documentTitle']");
-	private By documentNumLocator = By.xpath("//input[@name='documentNo']");
-	private By addBtnLocator = By.xpath("//input[@name='documentNo']");
-	private By exitBtnLocator = By.xpath("//input[@name='documentNo']");
-	private By resetBtnLocator = By.xpath("//input[@name='documentNo']");
+	// private By documentTypeDropdownLocator =
+	// By.xpath("//input[@aria-label='Document Type']");
+	// private By documentTitleLocator = By.xpath("//input[@name='documentTitle']");
+	// private By documentNumLocator = By.xpath("//input[@name='documentNo']");
+	// private By addBtnLocator = By.xpath("//input[@name='documentNo']");
+	// private By exitBtnLocator = By.xpath("//input[@name='documentNo']");
+	// private By resetBtnLocator = By.xpath("//input[@name='documentNo']");
 	private By nextButtonLocator = By.xpath("//button[@title='Next Step']");
 
 	public void clickNext() {
