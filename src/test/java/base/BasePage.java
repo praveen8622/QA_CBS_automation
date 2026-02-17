@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import utilities.LoggerUtil;
 import utilities.WaitUtils;
 
 public class BasePage {
@@ -84,12 +85,12 @@ public class BasePage {
 	// Get element info
 	// ================================
 	protected String getAttributeValue(By locator, String attribute) {
-		WebElement element = wait.waitForElementToBeVisible(locator);
+		WebElement element = wait.waitForElementToBePresent(locator);
 		return element.getAttribute(attribute);
 	}
 
 	protected boolean isSelected(By locator) {
-		WebElement element = wait.waitForElementToBeVisible(locator);
+		WebElement element = wait.waitForElementToBePresent(locator);
 		return element.isSelected();
 	}
 
@@ -97,13 +98,23 @@ public class BasePage {
 	// Checkbox handling
 	// ================================
 	protected void setCheckbox(By locator, boolean shouldBeChecked) {
-		WebElement element = wait.waitForElementToBeVisible(locator);
+		WebElement element = wait.waitForElementToBePresent(locator);
 
 		if (element.isSelected() != shouldBeChecked) {
-			element.click();
+			try {
+				element.click();
+			} catch (Exception e) {
+				LoggerUtil.info("Regular click failed, trying JS click for checkbox");
+				clickUsingJS(element);
+			}
 		}
 
-		Assert.assertEquals(element.isSelected(), shouldBeChecked, "Checkbox state mismatch");
+		Assert.assertEquals(isSelected(locator), shouldBeChecked, "Checkbox state mismatch");
+	}
+
+	protected void clickUsingJS(WebElement element) {
+		org.openqa.selenium.JavascriptExecutor js = (org.openqa.selenium.JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", element);
 	}
 
 	// ================================
