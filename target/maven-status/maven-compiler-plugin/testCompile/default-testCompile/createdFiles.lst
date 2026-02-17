@@ -5,6 +5,7 @@ pages\HomePage.class
 tests\CusRegTest.class
 pages\CustRegisterPage.class
 pages\CustCommunicationPage.class
+pages\CustCashFlowPage.class
 base\BasePage.class
 base\BaseTest.class
 pages\CustDocument.class
