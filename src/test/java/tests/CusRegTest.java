@@ -10,6 +10,7 @@ import pages.CustCommunicationPage;
 import pages.CustDocument;
 import pages.CustHighProfilePage;
 import pages.CustIdentityPage;
+import pages.CustExposurePage;
 import pages.CustRegHomepage;
 import pages.CustRegisterPage;
 import pages.CustTransactionPage;
@@ -26,6 +27,7 @@ public class CusRegTest extends BaseTestSequential {
 	private CustHighProfilePage highProfilePage;
 	private CustTransactionPage transactionPage;
 	private CustCashFlowPage cashFlowPage;
+	private CustExposurePage exposurePage;
 	private CustRegHomepage custRegHomePage;
 	private HomePage homePage;
 
@@ -40,6 +42,7 @@ public class CusRegTest extends BaseTestSequential {
 		highProfilePage = new CustHighProfilePage(driver);
 		transactionPage = new CustTransactionPage(driver);
 		cashFlowPage = new CustCashFlowPage(driver);
+		exposurePage = new CustExposurePage(driver);
 		custRegHomePage = new CustRegHomepage(driver);
 	}
 
@@ -245,6 +248,23 @@ public class CusRegTest extends BaseTestSequential {
 		cashFlowPage.enterCashFlowDetails("Income", "Monthly", "10000");
 		Thread.sleep(1000);
 		cashFlowPage.clickSave();
+		Thread.sleep(1000);
+	}
+
+	@Test(priority = 9)
+	public void verifyExposureDetails() throws InterruptedException {
+		LoggerUtil.info("Exposure to Other Financial Institutions Details test started");
+		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+
+		Thread.sleep(1000);
+		exposurePage.navigateToExposureTab();
+		Thread.sleep(1000);
+		exposurePage.clickAdd();
+		Thread.sleep(1000);
+		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans / Credit Exposure", "500000", "12",
+				"60");
+		Thread.sleep(1000);
+		exposurePage.clickSave();
 		Thread.sleep(1000);
 	}
 }
