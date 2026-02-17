@@ -23,22 +23,12 @@ public class BaseTest {
 		String baseUrl = prop.getProperty("baseUrl");
 
 		if (browser.equalsIgnoreCase("chrome")) {
-//    	  ChromeOptions options = new ChromeOptions();
-//
-//    	    // Disable password manager & breach warnings
-//    	    options.addArguments("--disable-notifications");
-//    	    options.addArguments("--disable-infobars");
-//
-//    	    options.setExperimentalOption("prefs", Map.of(
-//    	            "credentials_enable_service", false,
-//    	            "profile.password_manager_enabled", false,
-//    	            "profile.password_manager_leak_detection", false
-//    	    ));
-//          WebDriverManager.chromedriver().setup();
+			//
+			// WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
 
-//        WebDriverManager.firefoxdriver().setup();
+			// WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else {
 			throw new IllegalArgumentException("Invalid browser name: " + browser);
@@ -54,10 +44,10 @@ public class BaseTest {
 
 	@AfterMethod
 	public void tearDown() {
-      if (driver != null) {
-    	  
-          driver.quit();
-      }
+		if (driver != null) {
+
+			driver.quit();
+		}
 	}
 
 }
