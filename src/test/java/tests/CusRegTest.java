@@ -1,32 +1,45 @@
 package tests;
 
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import base.BaseTest;
+import base.BaseTestSequential;
 import pages.CustAddressPage;
 import pages.CustCommunicationPage;
 import pages.CustDocument;
 import pages.CustHighProfilePage;
 import pages.CustIdentityPage;
 import pages.CustRegisterPage;
+import pages.CustTransactionPage;
+import pages.HomePage;
 import utilities.LoggerUtil;
 
-//import pages.LoginPage;
-import pages.HomePage;
+public class CusRegTest extends BaseTestSequential {
 
-public class CusRegTest extends BaseTest {
+	private CustRegisterPage reg;
+	private CustIdentityPage identityPage;
+	private CustCommunicationPage communicationPage;
+	private CustDocument documentPage;
+	private CustAddressPage addressPage;
+	private CustHighProfilePage highProfilePage;
+	private CustTransactionPage transactionPage;
+	private HomePage homePage;
 
-	@Test
-	public void verifyLogin() throws InterruptedException {
+	@BeforeClass
+	public void pageSetup() {
+		reg = new CustRegisterPage(driver);
+		identityPage = new CustIdentityPage(driver);
+		communicationPage = new CustCommunicationPage(driver);
+		documentPage = new CustDocument(driver);
+		addressPage = new CustAddressPage(driver);
+		highProfilePage = new CustHighProfilePage(driver);
+		transactionPage = new CustTransactionPage(driver);
+		homePage = new HomePage(driver);
+	}
+
+	@Test(priority = 1)
+	public void verifyCustomerRegistration() throws InterruptedException {
 		LoggerUtil.info("Registration test started");
-		CustRegisterPage reg = new CustRegisterPage(driver);
-		CustIdentityPage identityPage = new CustIdentityPage(driver);
-		CustCommunicationPage communicationPage = new CustCommunicationPage(driver);
-		CustDocument documentPage = new CustDocument(driver);
-		CustAddressPage addressPage = new CustAddressPage(driver);
-		CustHighProfilePage highProfilePage = new CustHighProfilePage(driver);
-
-		HomePage homePage = new HomePage(driver);
 
 		// customer reg individual master
 		homePage.navigateToCustomerRegistration();
@@ -39,19 +52,14 @@ public class CusRegTest extends BaseTest {
 
 		reg.chooseLegalStatus("Individual");
 		reg.isEmployee("No");
-
 		reg.enterCustomerName("Ram", "Bahadur", "Karki");
 		reg.enterCustomerNameLocal("राम", "बाहादुर", "कारकि");
-
 		reg.enterMaidenName("Karki");
-
 		reg.selectBirthDate("1995", "March", "29");
 		reg.enterBirthCountry("india");
 		reg.enterBirthAddressIfApplicable("india");
-
 		reg.selectIsForeign(false, "India");
 		reg.selectIsPEP(false, "Domestic pep");
-
 		reg.selectGender("male");
 		reg.selectMaritalStatus("single");
 		reg.selectReligion("hindu");
@@ -61,9 +69,17 @@ public class CusRegTest extends BaseTest {
 		Thread.sleep(3000);
 		reg.clickNextButton();
 		Thread.sleep(3000);
+	}
+
+	@Test(priority = 2)
+	public void verifyIdentityDetails() throws InterruptedException {
+		// homePage.searchAndEditDraftCustomer("Ram");
 
 		// open and fill identity form
+		LoggerUtil.info("Identity Details test started");
+
 		reg.openIdentityformPage();
+
 		identityPage.openAddIdentityForm();
 		Thread.sleep(3000);
 		identityPage.selectIdentityType("Passport");
@@ -77,8 +93,14 @@ public class CusRegTest extends BaseTest {
 		Thread.sleep(3000);
 		identityPage.clickNextbutton();
 		Thread.sleep(3000);
+	}
+
+	@Test(priority = 3)
+	public void verifyCommunicationDetails() throws InterruptedException {
+		// homePage.searchAndEditDraftCustomer("Ram");
 
 		// open and fill customer communication page
+		LoggerUtil.info("Communication Details test started");
 
 		communicationPage.openAddCommunicationForm();
 		Thread.sleep(3000);
@@ -94,9 +116,27 @@ public class CusRegTest extends BaseTest {
 		Thread.sleep(3000);
 		communicationPage.clickNextbutton();
 		Thread.sleep(3000);
+	}
+
+	@Test(priority = 4)
+	public void verifyDocumentDetails() throws InterruptedException {
+		// homePage.searchAndEditDraftCustomer("Ram");
+
 		// open and fill customer document page
+		LoggerUtil.info("Document Details test started");
+
+		// The original code passed document details quickly?
+		// Original: documentPage.clickNext();
 		documentPage.clickNext();
 		Thread.sleep(3000);
+	}
+
+	@Test(priority = 5)
+	public void verifyAddressDetails() throws InterruptedException {
+		// homePage.searchAndEditDraftCustomer("Ram");
+
+		LoggerUtil.info("Address Details test started");
+
 		addressPage.openAddAddressForm();
 		Thread.sleep(3000);
 		addressPage.selectAddressType("Permanent");
@@ -125,6 +165,14 @@ public class CusRegTest extends BaseTest {
 		Thread.sleep(3000);
 		addressPage.clickNext();
 		Thread.sleep(3000);
+	}
+
+	@Test(priority = 6)
+	public void verifyHighProfileDetails() throws InterruptedException {
+		// homePage.searchAndEditDraftCustomer("Ram");
+
+		LoggerUtil.info("High Profile Details test started");
+
 		addressPage.openHighProfilevConnformPage();
 		Thread.sleep(3000);
 
@@ -158,6 +206,22 @@ public class CusRegTest extends BaseTest {
 		highProfilePage.clickSave();
 		Thread.sleep(3000);
 		highProfilePage.clickNext();
+		Thread.sleep(3000);
+	}
+
+	@Test(priority = 7)
+	public void verifyTransactionDetails() throws InterruptedException {
+		// homePage.searchAndEditDraftCustomer("Ram");
+
+		LoggerUtil.info("Transaction Details test started");
+
+		Thread.sleep(3000);
+
+		transactionPage.enterTransactionDetails("Daily", true, "10000", "5");
+		transactionPage.enterTransactionDetails("Weekly", true, "50000", "10");
+
+		Thread.sleep(3000);
+		transactionPage.clickSave();
 		Thread.sleep(3000);
 
 	}

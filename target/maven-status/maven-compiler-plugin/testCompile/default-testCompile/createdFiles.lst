@@ -1,5 +1,7 @@
 utilities\WaitUtils.class
 pages\LoginPage.class
+pages\CustTransactionPage.class
+pages\HomePage.class
 tests\CusRegTest.class
 pages\CustRegisterPage.class
 pages\CustCommunicationPage.class
@@ -10,6 +12,7 @@ pages\CustIdentityPage.class
 pages\CustHighProfilePage.class
 tests\NewTest.class
 utilities\ConfigReader.class
+base\BaseTestSequential.class
 pages\CustAddressPage.class
 helper\LoginHelper.class
 utilities\LoggerUtil.class

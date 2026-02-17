@@ -1,5 +1,6 @@
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\base\BasePage.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\base\BaseTest.java
+C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\base\BaseTestSequential.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\helper\LoginHelper.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustAddressPage.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustCommunicationPage.java
@@ -7,6 +8,8 @@ C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustDo
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustHighProfilePage.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustIdentityPage.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustRegisterPage.java
+C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\CustTransactionPage.java
+C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\HomePage.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\pages\LoginPage.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\tests\CusRegTest.java
 C:\Users\Praveen_Vortex\eclipse-workspace\KYC_Cus_Reg\src\test\java\tests\NewTest.java

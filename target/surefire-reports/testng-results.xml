@@ -1,25 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-11T14:55:36 NPT" name="Suite" finished-at="2026-02-11T14:58:26 NPT" duration-ms="169299">
+  <suite started-at="2026-02-17T12:54:20 NPT" name="Surefire suite" finished-at="2026-02-17T12:57:15 NPT" duration-ms="175283">
     <groups>
     </groups>
-    <test started-at="2026-02-11T14:55:36 NPT" name="Chrome Test" finished-at="2026-02-11T14:58:26 NPT" duration-ms="169299">
+    <test started-at="2026-02-17T12:54:20 NPT" name="Surefire test" finished-at="2026-02-17T12:57:15 NPT" duration-ms="175283">
       <class name="tests.CusRegTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@4cf8b2dc]" started-at="2026-02-11T14:55:36 NPT" name="setUp" finished-at="2026-02-11T14:55:57 NPT" duration-ms="20963" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:54:20 NPT" name="setUp" finished-at="2026-02-17T12:54:36 NPT" duration-ms="15831" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLogin()[pri:0, instance:tests.CusRegTest@4cf8b2dc]" started-at="2026-02-11T14:55:57 NPT" name="verifyLogin" finished-at="2026-02-11T14:58:24 NPT" duration-ms="146958" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:54:36 NPT" name="pageSetup" finished-at="2026-02-17T12:54:36 NPT" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@4cf8b2dc]" started-at="2026-02-11T14:58:24 NPT" name="tearDown" finished-at="2026-02-11T14:58:26 NPT" duration-ms="1343" status="PASS">
+        </test-method> <!-- pageSetup -->
+        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:54:36 NPT" name="verifyCustomerRegistration" finished-at="2026-02-17T12:54:48 NPT" duration-ms="12569" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCustomerRegistration -->
+        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:54:48 NPT" name="verifyIdentityDetails" finished-at="2026-02-17T12:55:07 NPT" duration-ms="18457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIdentityDetails -->
+        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:55:07 NPT" name="verifyCommunicationDetails" finished-at="2026-02-17T12:55:29 NPT" duration-ms="22605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCommunicationDetails -->
+        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:55:29 NPT" name="verifyDocumentDetails" finished-at="2026-02-17T12:55:32 NPT" duration-ms="3139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDocumentDetails -->
+        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:55:32 NPT" name="verifyAddressDetails" finished-at="2026-02-17T12:56:15 NPT" duration-ms="42453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddressDetails -->
+        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:56:15 NPT" name="verifyHighProfileDetails" finished-at="2026-02-17T12:57:04 NPT" duration-ms="48998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHighProfileDetails -->
+        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:57:04 NPT" name="verifyTransactionDetails" finished-at="2026-02-17T12:57:14 NPT" duration-ms="10063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTransactionDetails -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@53f0a4cb]" started-at="2026-02-17T12:57:14 NPT" name="tearDown" finished-at="2026-02-17T12:57:15 NPT" duration-ms="1109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.CusRegTest -->
-    </test> <!-- Chrome Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
