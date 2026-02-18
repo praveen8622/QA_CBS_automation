@@ -16,6 +16,7 @@ import pages.CustRelationshipIdentityPage;
 import pages.CustRelationshipPage;
 import pages.CustRegHomepage;
 import pages.CustRegisterPage;
+import pages.CustRelationshipCommunication;
 import pages.CustTransactionPage;
 import pages.HomePage;
 import utilities.LoggerUtil;
@@ -34,6 +35,7 @@ public class CusRegTest extends BaseTestSequential {
 	private CustEmploymentPage employmentPage;
 	private CustRelationshipPage relationshipPage;
 	private CustRelationshipIdentityPage relationshipIdentityPage;
+	private CustRelationshipCommunication relationshipCommunicationPage;
 	private CustRegHomepage custRegHomePage;
 	private HomePage homePage;
 
@@ -52,6 +54,7 @@ public class CusRegTest extends BaseTestSequential {
 		employmentPage = new CustEmploymentPage(driver);
 		relationshipPage = new CustRelationshipPage(driver);
 		relationshipIdentityPage = new CustRelationshipIdentityPage(driver);
+		relationshipCommunicationPage = new CustRelationshipCommunication(driver);
 		custRegHomePage = new CustRegHomepage(driver);
 	}
 
@@ -104,7 +107,7 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		identityPage.selectIdentityType("Passport");
 		identityPage.enterIdentityNumber("H123456789");
-		identityPage.enterOpenIssueOfficeName("DAO");
+		identityPage.enterOpenIssueOfficeName("DAO Kathmandu");
 		Thread.sleep(1000);
 		identityPage.selectIssueDate("2020", "March", "29");
 		identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
@@ -349,6 +352,26 @@ public class CusRegTest extends BaseTestSequential {
 		// upload for now as it needs a real file
 
 		relationshipIdentityPage.clickSave();
+		Thread.sleep(2000);
+	}
+
+	@Test(priority = 13)
+	public void verifyRelationshipCommunication() throws InterruptedException {
+		LoggerUtil.info("Relationship Communication Details test started");
+		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+		custRegHomePage.clickRelationshipMasterTab();
+		Thread.sleep(1000);
+		custRegHomePage.clickAddRelationship();
+		Thread.sleep(3000);
+		relationshipCommunicationPage.clickCommunicationTab();
+		Thread.sleep(1000);
+		relationshipCommunicationPage.clickAddCommunication();
+		Thread.sleep(1000);
+		relationshipCommunicationPage.selectCommunicationType("Mobile");
+		Thread.sleep(1000);
+		relationshipCommunicationPage.enterCommunicationNumber("987654321");
+		Thread.sleep(1000);
+		relationshipCommunicationPage.clickSaveCommunication();
 		Thread.sleep(2000);
 	}
 }
