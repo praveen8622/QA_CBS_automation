@@ -46,7 +46,6 @@ public class CustAddressPage extends BasePage {
     private By resetButtonLocator = By.xpath("//button[.//div[text()='Reset']]");
     private By saveButtonLocator = By.xpath("//button[.//div[text()='Save']]");
     private By nextButtonLocator = By.xpath("//button[@title='Next Step']");
-    private By highProfilevConnLocator = By.xpath("//p[normalize-space()='High Profile Connections']");
 
     // ================================
     // Constructor
@@ -143,8 +142,4 @@ public class CustAddressPage extends BasePage {
         click(nextButtonLocator);
     }
 
-    public void openHighProfilevConnformPage() {
-        LoggerUtil.info("Clicking 'High Profilev Conn' step");
-        click(highProfilevConnLocator);
-    }
 }

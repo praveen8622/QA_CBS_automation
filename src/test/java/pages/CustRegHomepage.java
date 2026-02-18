@@ -13,6 +13,16 @@ public class CustRegHomepage extends BasePage {
     private By addCustregBtnLocator = By.xpath("//div[contains(text(),'Add Customer Registration')]");
     private By loadBtnLocator = By.xpath("//button[@title='Load Data']");
     private By nextBtnLocator = By.xpath("//form//button[@type='submit' and .//div[normalize-space()='Next Step']]");
+    // =================================================
+    // Locators of menues
+    // =================================================
+    private By custIdentityLocator = By.xpath("//p[normalize-space()='Customer Identity']");
+    private By highProfilevConnLocator = By.xpath("//p[normalize-space()='High Profile Connections']");
+    private By cashFlowTabLocator = By.xpath("//p[normalize-space()='Cash Flow']");
+    private By exposureTabLocator = By.xpath("//p[normalize-space()='Exposure to Other Financial Institutions']");
+    private By employmentTabLocator = By.xpath("//p[normalize-space()='Employment Details']");
+    private By relationshipTabLocator = By.xpath("//div[normalize-space()='Relationships']");
+    private By addRelationshipBtn = By.xpath("//button[@title='Add']");
 
     public CustRegHomepage(WebDriver driver) {
         super(driver);
@@ -66,5 +76,40 @@ public class CustRegHomepage extends BasePage {
         LoggerUtil.info("Clicking 'Delete' button for customer: " + customerName);
         By deleteBtnLocator = By.xpath("//tr[td[normalize-space()='" + customerName + "']]//button[@title='Delete']");
         click(deleteBtnLocator);
+    }
+
+    public void openIdentityformPage() {
+        LoggerUtil.info("Clicking 'Customer Identity' step");
+        click(custIdentityLocator);
+    }
+
+    public void openHighProfilevConnformPage() {
+        LoggerUtil.info("Clicking 'High Profilev Conn' step");
+        click(highProfilevConnLocator);
+    }
+
+    public void navigateToCashFlowTab() {
+        LoggerUtil.info("Navigating to Cash Flow tab");
+        click(cashFlowTabLocator);
+    }
+
+    public void navigateToExposureTab() {
+        LoggerUtil.info("Navigating to Exposure tab");
+        click(exposureTabLocator);
+    }
+
+    public void navigateToEmploymentTab() {
+        LoggerUtil.info("Navigating to Employment Details tab");
+        click(employmentTabLocator);
+    }
+
+    public void clickRelationshipMasterTab() {
+        LoggerUtil.info("Clicking 'Relationship tab");
+        click(relationshipTabLocator);
+    }
+
+    public void clickAddRelationship() {
+        LoggerUtil.info("Clicking 'Add Relationship' button");
+        click(addRelationshipBtn);
     }
 }

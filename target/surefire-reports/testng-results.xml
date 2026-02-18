@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-17T15:23:26 NPT" name="Surefire suite" finished-at="2026-02-17T15:24:04 NPT" duration-ms="38191">
+  <suite started-at="2026-02-18T16:33:20 NPT" name="Surefire suite" finished-at="2026-02-18T16:34:00 NPT" duration-ms="40278">
     <groups>
     </groups>
-    <test started-at="2026-02-17T15:23:26 NPT" name="Surefire test" finished-at="2026-02-17T15:24:04 NPT" duration-ms="38191">
+    <test started-at="2026-02-18T16:33:20 NPT" name="Surefire test" finished-at="2026-02-18T16:34:00 NPT" duration-ms="40278">
       <class name="tests.CusRegTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@53142455]" started-at="2026-02-17T15:23:26 NPT" name="setUp" finished-at="2026-02-17T15:23:44 NPT" duration-ms="18427" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@1253e7cb]" started-at="2026-02-18T16:33:20 NPT" name="setUp" finished-at="2026-02-18T16:33:36 NPT" duration-ms="15862" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@53142455]" started-at="2026-02-17T15:23:44 NPT" name="pageSetup" finished-at="2026-02-17T15:23:44 NPT" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@1253e7cb]" started-at="2026-02-18T16:33:36 NPT" name="pageSetup" finished-at="2026-02-18T16:33:36 NPT" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CusRegTest@53142455]" started-at="2026-02-17T15:23:44 NPT" name="verifyCashFlowDetails" finished-at="2026-02-17T15:24:02 NPT" duration-ms="17969" status="PASS">
+        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CusRegTest@1253e7cb]" started-at="2026-02-18T16:33:36 NPT" name="verifyRelationshipIdentity" finished-at="2026-02-18T16:33:55 NPT" duration-ms="19404" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCashFlowDetails -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@53142455]" started-at="2026-02-17T15:24:02 NPT" name="tearDown" finished-at="2026-02-17T15:24:04 NPT" duration-ms="1745" status="PASS">
+        </test-method> <!-- verifyRelationshipIdentity -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@1253e7cb]" started-at="2026-02-18T16:33:55 NPT" name="tearDown" finished-at="2026-02-18T16:34:00 NPT" duration-ms="4910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

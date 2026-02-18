@@ -17,6 +17,7 @@ public class CustRegisterPage extends BasePage {
 	// Personal Details Locators
 	// =================================================
 	private By legalStatusLocator = By.cssSelector("input[role='combobox']");
+	private By ScreeningIdLocator = By.xpath("//input[@name='screeningId']");
 	private By fNameLocator = By.cssSelector("input[aria-label='First Name']");
 	private By mNameLocator = By.cssSelector("input[aria-label='Middle Name']");
 	private By lNameLocator = By.cssSelector("input[aria-label='Last Name']");
@@ -50,7 +51,6 @@ public class CustRegisterPage extends BasePage {
 	private By isEmployeeYesLocator = By.xpath("//input[@name='isHomeEmployee' and @value='true']");
 	private By isEmployeeNoLocator = By.xpath("//input[@name='isHomeEmployee' and @value='false']");
 	private By nextBtnLocator = By.xpath("//div[normalize-space()='Proceed']");
-	private By custIdentityLocator = By.xpath("//p[normalize-space()='Customer Identity']");
 
 	// =================================================
 	// Constructor
@@ -76,6 +76,12 @@ public class CustRegisterPage extends BasePage {
 		} else {
 			throw new IllegalArgumentException("Invalid value for Is Employee. Use 'Yes' or 'No'");
 		}
+	}
+
+	public void enterScreeningId(String screeningIdValue) {
+		LoggerUtil.info("Entering Screening ID: " + screeningIdValue);
+		typeText(ScreeningIdLocator, screeningIdValue);
+		assertValueEquals(ScreeningIdLocator, screeningIdValue, "Screening ID not entered correctly");
 	}
 
 	// =================================================
@@ -208,11 +214,6 @@ public class CustRegisterPage extends BasePage {
 	public void clickNextButton() {
 		LoggerUtil.info("Clicking 'Next' button");
 		click(nextBtnLocator);
-	}
-
-	public void openIdentityformPage() {
-		LoggerUtil.info("Clicking 'Customer Identity' step");
-		click(custIdentityLocator);
 	}
 
 	// =================================================

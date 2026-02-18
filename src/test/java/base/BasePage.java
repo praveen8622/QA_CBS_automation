@@ -145,4 +145,12 @@ public class BasePage {
 	protected void assertFalseCondition(boolean condition, String message) {
 		Assert.assertFalse(condition, message);
 	}
+
+	// ================================
+	// File Upload
+	// ================================
+	protected void uploadFile(By locator, String filePath) {
+		WebElement element = wait.waitForElementToBePresent(locator);
+		element.sendKeys(filePath);
+	}
 }
