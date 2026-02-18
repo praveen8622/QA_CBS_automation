@@ -13,10 +13,10 @@ public class CustRelationshipIdentityPage extends BasePage {
     private By identityTabLocator = By.xpath("//button[normalize-space()='Identity']");
     private By addIdentityBtnLocator = By.xpath(
             "//h4[normalize-space()='Relationship Identity']/ancestor::div[contains(@class,'flex')]//button[@title='Add']");
-    private By identityTypeContainerBy = By
+    private By identityTypeContainerLocator = By
             .xpath("//input[@aria-label='Identity Type']/ancestor::div[contains(@class, 'container')]");
-    private By identityTypeInputBy = By.xpath("//input[@aria-label='Identity Type']");
-    private By identityNoInputBy = By.xpath("//input[@aria-label='Identity Number']");
+    private By identityTypeInputLocator = By.xpath("//input[@aria-label='Identity Type']");
+    private By identityNoInputLocator = By.xpath("//input[@aria-label='Identity Number']");
 
     private By issueDateButtonLocator = By.name("issueDate");
 
@@ -26,17 +26,16 @@ public class CustRelationshipIdentityPage extends BasePage {
     private By yearDropdownLocator = By.xpath("//select[@name='years']");
 
     // Conditional Fields
-    // Using name attributes and aria-labels based on user description and previous
-    // patterns
-    private By issueOfficeInputBy = By.name("openIssueOfficeName");
-    private By localBodyContainerBy = By
+    private By issueOfficeInputLocator = By.name("openIssueOfficeName");
+    private By localBodyContainerLocator = By
             .xpath("//input[@aria-label='Local Body']/ancestor::div[contains(@class, 'container')]");
-    private By localBodyInputBy = By.xpath("//input[@aria-label='local Body']");
-    private By stateContainerBy = By.xpath("//input[@aria-label='State']/ancestor::div[contains(@class, 'container')]");
-    private By stateInputBy = By.xpath("//input[@aria-label='State']");
+    private By localBodyInputLocator = By.xpath("//input[@aria-label='local Body']");
+    private By stateContainerLocator = By
+            .xpath("//input[@aria-label='State']/ancestor::div[contains(@class, 'container')]");
+    private By stateInputLocator = By.xpath("//input[@aria-label='State']");
 
-    private By fileUploadInputBy = By.xpath("//input[@type='file']");
-    private By saveBtnBy = By.xpath("//button[normalize-space()='Save']");
+    private By fileUploadInputLocator = By.xpath("//input[@type='file']");
+    private By saveBtnLocator = By.xpath("//button[normalize-space()='Save']");
 
     public CustRelationshipIdentityPage(WebDriver driver) {
         super(driver);
@@ -57,13 +56,13 @@ public class CustRelationshipIdentityPage extends BasePage {
 
     public void selectIdentityType(String type) {
         LoggerUtil.info("Selecting Identity Type: " + type);
-        selectFromReactSelect(identityTypeContainerBy, identityTypeInputBy, type);
+        selectFromReactSelect(identityTypeContainerLocator, identityTypeInputLocator, type);
     }
 
     public void enterIdentityNumber(String number) {
         LoggerUtil.info("Entering Identity Number: " + number);
-        typeText(identityNoInputBy, number);
-        assertValueEquals(identityNoInputBy, number, "Identity number not entered correctly");
+        typeText(identityNoInputLocator, number);
+        assertValueEquals(identityNoInputLocator, number, "Identity number not entered correctly");
     }
 
     public void selectIssueDate(String year, String month, String day) {
@@ -132,26 +131,26 @@ public class CustRelationshipIdentityPage extends BasePage {
 
     public void enterIssueOffice(String office) {
         LoggerUtil.info("Entering Issue Office: " + office);
-        typeText(issueOfficeInputBy, office);
+        typeText(issueOfficeInputLocator, office);
     }
 
     public void selectLocalBody(String localBody) {
         LoggerUtil.info("Selecting Local Body: " + localBody);
-        selectFromReactSelect(localBodyContainerBy, localBodyInputBy, localBody);
+        selectFromReactSelect(localBodyContainerLocator, localBodyInputLocator, localBody);
     }
 
     public void selectState(String state) {
         LoggerUtil.info("Selecting State: " + state);
-        selectFromReactSelect(stateContainerBy, stateInputBy, state);
+        selectFromReactSelect(stateContainerLocator, stateInputLocator, state);
     }
 
     public void uploadDocument(String filePath) {
         LoggerUtil.info("Uploading document: " + filePath);
-        uploadFile(fileUploadInputBy, filePath);
+        uploadFile(fileUploadInputLocator, filePath);
     }
 
     public void clickSave() {
         LoggerUtil.info("Clicking Save button in Relationship Identity form");
-        click(saveBtnBy);
+        click(saveBtnLocator);
     }
 }
