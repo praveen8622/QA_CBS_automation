@@ -13,6 +13,7 @@ import pages.CustIdentityPage;
 import pages.CustEmploymentPage;
 import pages.CustExposurePage;
 import pages.CustRelationshipIdentityPage;
+import pages.CustRelationshipDocumentPage;
 import pages.CustRelationshipPage;
 import pages.CustRegHomepage;
 import pages.CustRegisterPage;
@@ -36,6 +37,7 @@ public class CusRegTest extends BaseTestSequential {
 	private CustRelationshipPage relationshipPage;
 	private CustRelationshipIdentityPage relationshipIdentityPage;
 	private CustRelationshipCommunication relationshipCommunicationPage;
+	private CustRelationshipDocumentPage relationshipDocumentPage;
 	private CustRegHomepage custRegHomePage;
 	private HomePage homePage;
 
@@ -55,6 +57,7 @@ public class CusRegTest extends BaseTestSequential {
 		relationshipPage = new CustRelationshipPage(driver);
 		relationshipIdentityPage = new CustRelationshipIdentityPage(driver);
 		relationshipCommunicationPage = new CustRelationshipCommunication(driver);
+		relationshipDocumentPage = new CustRelationshipDocumentPage(driver);
 		custRegHomePage = new CustRegHomepage(driver);
 	}
 
@@ -372,6 +375,34 @@ public class CusRegTest extends BaseTestSequential {
 		relationshipCommunicationPage.enterCommunicationNumber("987654321");
 		Thread.sleep(1000);
 		relationshipCommunicationPage.clickSaveCommunication();
+		Thread.sleep(2000);
+	}
+
+	@Test(priority = 14)
+	public void verifyRelationshipDocument() throws InterruptedException {
+		LoggerUtil.info("Relationship Document Details test started");
+		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+		custRegHomePage.clickRelationshipMasterTab();
+		Thread.sleep(1000);
+		custRegHomePage.clickAddRelationship();
+		Thread.sleep(3000);
+
+		relationshipDocumentPage.clickDocumentTab();
+		Thread.sleep(1000);
+		relationshipDocumentPage.clickAddDocument();
+		Thread.sleep(1000);
+
+		relationshipDocumentPage.selectDocumentType("Citizenship");
+		Thread.sleep(1000);
+		relationshipDocumentPage.enterDocumentTitle("Citizenship Front");
+		Thread.sleep(1000);
+		relationshipDocumentPage.enterDocumentNumber("123-456-789");
+		Thread.sleep(1000);
+		relationshipDocumentPage.selectMimeType("image/png");
+		Thread.sleep(1000);
+		// relationshipDocumentPage.uploadDocument("C:\\path\\to\\doc.png");
+
+		relationshipDocumentPage.clickSave();
 		Thread.sleep(2000);
 	}
 }
