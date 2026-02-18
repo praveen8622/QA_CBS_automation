@@ -10,7 +10,7 @@ public class CustExposurePage extends BasePage {
     // =================================================
     // Locators
     // =================================================
-    private By exposureTabLocator = By.xpath("//p[normalize-space()='Exposure to Other Financial Institutions']");
+
     private By addBtnLocator = By.xpath("//button[@title='Add']");
 
     private By instTypeContainerBy = By
@@ -36,11 +36,6 @@ public class CustExposurePage extends BasePage {
     // =================================================
     // Actions
     // =================================================
-
-    public void navigateToExposureTab() {
-        LoggerUtil.info("Navigating to Exposure tab");
-        click(exposureTabLocator);
-    }
 
     public void clickAdd() {
         LoggerUtil.info("Clicking 'Add' button for Exposure details");
