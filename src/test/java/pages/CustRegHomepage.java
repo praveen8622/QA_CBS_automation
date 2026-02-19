@@ -16,8 +16,13 @@ public class CustRegHomepage extends BasePage {
     // =================================================
     // Locators of menues
     // =================================================
-    private By custIdentityLocator = By.xpath("//p[normalize-space()='Customer Identity']");
-    private By highProfilevConnLocator = By.xpath("//p[normalize-space()='High Profile Connections']");
+    private By identityTabLocator = By.xpath("//p[normalize-space()='Customer Identity']");
+    private By communicationTabLocator = By.xpath("//p[normalize-space()='Communication Details']");
+    private By documentTabLocator = By.xpath("//button[normalize-space()='Customer Document']");
+    private By addressTabLocator = By.xpath("//p[normalize-space()='Customer Address']");
+    private By photoTabLocator = By.xpath("//p[normalize-space()='Customer Photo']");
+    private By highProfileTabConnLocator = By.xpath("//p[normalize-space()='High Profile Connections']");
+    private By transactionVolumeTabLocator = By.xpath("//p[normalize-space()='Transaction Volume']");
     private By cashFlowTabLocator = By.xpath("//p[normalize-space()='Cash Flow']");
     private By exposureTabLocator = By.xpath("//p[normalize-space()='Exposure to Other Financial Institutions']");
     private By employmentTabLocator = By.xpath("//p[normalize-space()='Employment Details']");
@@ -78,14 +83,39 @@ public class CustRegHomepage extends BasePage {
         click(deleteBtnLocator);
     }
 
-    public void openIdentityformPage() {
-        LoggerUtil.info("Clicking 'Customer Identity' step");
-        click(custIdentityLocator);
+    public void navigateToIdentityTab() {
+        LoggerUtil.info("Clicking 'Customer Identity' tab");
+        click(identityTabLocator);
     }
 
-    public void openHighProfilevConnformPage() {
+    public void navigateToCommunicationTab() {
+        LoggerUtil.info("Clicking 'Communication' tab");
+        click(communicationTabLocator);
+    }
+
+    public void navigateToDocumentTab() {
+        LoggerUtil.info("Clicking Document tab");
+        click(documentTabLocator);
+    }
+
+    public void navigateToAddressTab() {
+        LoggerUtil.info("Clicking Address tab");
+        click(addressTabLocator);
+    }
+
+    public void navigateToPhotoTab() {
+        LoggerUtil.info("Clicking Photo tab");
+        click(photoTabLocator);
+    }
+
+    public void navigateToHighProfileTab() {
         LoggerUtil.info("Clicking 'High Profilev Conn' step");
-        click(highProfilevConnLocator);
+        click(highProfileTabConnLocator);
+    }
+
+    public void navigateToTransactionVolumeTab() {
+        LoggerUtil.info("Clicking 'Transaction Volume' step");
+        click(transactionVolumeTabLocator);
     }
 
     public void navigateToCashFlowTab() {
@@ -103,12 +133,12 @@ public class CustRegHomepage extends BasePage {
         click(employmentTabLocator);
     }
 
-    public void clickRelationshipMasterTab() {
+    public void navigateToRelationshipMasterTab() {
         LoggerUtil.info("Clicking 'Relationship tab");
         click(relationshipTabLocator);
     }
 
-    public void clickAddRelationship() {
+    public void clickAddRelationshipBtn() {
         LoggerUtil.info("Clicking 'Add Relationship' button");
         click(addRelationshipBtn);
     }

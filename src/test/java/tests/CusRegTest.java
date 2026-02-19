@@ -13,6 +13,7 @@ import pages.CustIdentityPage;
 import pages.CustEmploymentPage;
 import pages.CustExposurePage;
 import pages.CustRelationshipIdentityPage;
+import pages.CustRelationshipAddressPage;
 import pages.CustRelationshipDocumentPage;
 import pages.CustRelationshipPage;
 import pages.CustRegHomepage;
@@ -38,6 +39,7 @@ public class CusRegTest extends BaseTestSequential {
 	private CustRelationshipIdentityPage relationshipIdentityPage;
 	private CustRelationshipCommunication relationshipCommunicationPage;
 	private CustRelationshipDocumentPage relationshipDocumentPage;
+	private CustRelationshipAddressPage relationshipAddressPage;
 	private CustRegHomepage custRegHomePage;
 	private HomePage homePage;
 
@@ -58,6 +60,7 @@ public class CusRegTest extends BaseTestSequential {
 		relationshipIdentityPage = new CustRelationshipIdentityPage(driver);
 		relationshipCommunicationPage = new CustRelationshipCommunication(driver);
 		relationshipDocumentPage = new CustRelationshipDocumentPage(driver);
+		relationshipAddressPage = new CustRelationshipAddressPage(driver);
 		custRegHomePage = new CustRegHomepage(driver);
 	}
 
@@ -77,9 +80,9 @@ public class CusRegTest extends BaseTestSequential {
 
 		reg.chooseLegalStatus("Individual");
 		reg.isEmployee("No");
-		reg.enterScreeningId("1");
-		reg.enterCustomerName("Ram", "Bahadur", "Karki");
-		reg.enterCustomerNameLocal("राम", "बाहादुर", "कारकि");
+		reg.enterScreeningId("73");
+		reg.enterCustomerName("Prakash", "Bahadur", "Karki");
+		reg.enterCustomerNameLocal("प्रकाश", "बाहादुर", "कारकि");
 		reg.enterMaidenName("Karki");
 		reg.selectBirthDate("1995", "March", "29");
 		reg.enterBirthCountry("india");
@@ -87,6 +90,7 @@ public class CusRegTest extends BaseTestSequential {
 		reg.selectIsForeign(false, "India");
 		reg.selectIsPEP(false, "Domestic pep");
 		reg.selectGender("male");
+		reg.selectOnboardingChannel("Branch");
 		reg.selectMaritalStatus("single");
 		reg.selectReligion("hindu");
 		reg.selectEducation("Master’s Degree");
@@ -99,20 +103,21 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 2)
 	public void verifyIdentityDetails() throws InterruptedException {
-		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+		// custRegHomePage.searchAndEditDraftCustomer("SHAMBHU SHRESTHA");
 
 		// open and fill identity form
 		LoggerUtil.info("Identity Details test started");
 
-		custRegHomePage.openIdentityformPage();
+		custRegHomePage.navigateToIdentityTab();
 
 		identityPage.openAddIdentityForm();
 		Thread.sleep(1000);
 		identityPage.selectIdentityType("Passport");
-		identityPage.enterIdentityNumber("H123456789");
-		identityPage.enterOpenIssueOfficeName("DAO Kathmandu");
+		identityPage.enterIdentityNumber("P8464373027");
+		identityPage.enterOpenIssueOfficeName("DAO");
 		Thread.sleep(1000);
 		identityPage.selectIssueDate("2020", "March", "29");
+		Thread.sleep(1000);
 		identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
 		Thread.sleep(1000);
 		identityPage.clickSaveIdentity();
@@ -128,6 +133,7 @@ public class CusRegTest extends BaseTestSequential {
 		// open and fill customer communication page
 		LoggerUtil.info("Communication Details test started");
 
+		custRegHomePage.navigateToCommunicationTab();
 		communicationPage.openAddCommunicationForm();
 		Thread.sleep(1000);
 		communicationPage.selectDevice("Mobile");
@@ -149,7 +155,12 @@ public class CusRegTest extends BaseTestSequential {
 		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		LoggerUtil.info("Document Details test started");
-		documentPage.clickNext();
+		custRegHomePage.navigateToDocumentTab();
+		documentPage.clickAddDocument();
+		documentPage.selectDocumentType("Passport");
+		documentPage.enterDocumentTitle("Passport");
+		documentPage.enterDocumentNumber("H123456789");
+		documentPage.clickSave();
 		Thread.sleep(1000);
 	}
 
@@ -159,6 +170,7 @@ public class CusRegTest extends BaseTestSequential {
 
 		LoggerUtil.info("Address Details test started");
 
+		custRegHomePage.navigateToAddressTab();
 		addressPage.openAddAddressForm();
 		Thread.sleep(1000);
 		addressPage.selectAddressType("Permanent");
@@ -181,7 +193,8 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		addressPage.enterLongitude("123");
 		// Thread.sleep(1000);
-		// addressPage.uploadAddressDocument("C:\\Users\\Praveen_Vortex\\Downloads\\1.jpg");
+		//
+		addressPage.uploadAddressDocument("C:\\Users\\Praveen_Vortex\\Downloads\\1.jpg");
 		Thread.sleep(1000);
 		addressPage.clickSave();
 		Thread.sleep(1000);
@@ -195,10 +208,9 @@ public class CusRegTest extends BaseTestSequential {
 
 		LoggerUtil.info("High Profile Details test started");
 
-		custRegHomePage.openHighProfilevConnformPage();
+		custRegHomePage.navigateToHighProfileTab();
 		Thread.sleep(1000);
 
-		// open and fill customer high profile page
 		highProfilePage.openAddHighProfileForm();
 		Thread.sleep(1000);
 		highProfilePage.enterFullName("Ram");
@@ -222,8 +234,8 @@ public class CusRegTest extends BaseTestSequential {
 		highProfilePage.selectPrCountry("Nepal");
 		Thread.sleep(1000);
 		highProfilePage.selectEducation("master");
-		// Thread.sleep(1000);
-		// highProfilePage.enterPosition("Manager");
+		Thread.sleep(1000);
+		highProfilePage.enterPosition("Manager");
 		Thread.sleep(1000);
 		highProfilePage.clickSave();
 		Thread.sleep(1000);
@@ -238,7 +250,7 @@ public class CusRegTest extends BaseTestSequential {
 		LoggerUtil.info("Transaction Details test started");
 
 		Thread.sleep(1000);
-
+		custRegHomePage.navigateToTransactionVolumeTab();
 		transactionPage.enterTransactionDetails("Daily", true, "10000", "5");
 		transactionPage.enterTransactionDetails("Weekly", true, "50000", "10");
 
@@ -265,16 +277,15 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 9)
 	public void verifyExposureDetails() throws InterruptedException {
-		LoggerUtil.info("Exposure to Other Financial Institutions Details test started");
-		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+		LoggerUtil.info("Exposure to Other Financial Institutions Details test	started");
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		Thread.sleep(1000);
 		custRegHomePage.navigateToExposureTab();
 		Thread.sleep(1000);
 		exposurePage.clickAdd();
 		Thread.sleep(1000);
-		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans / Credit Exposure", "500000", "12",
-				"60");
+		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans /Credit Exposure", "500000", "12", "60");
 		Thread.sleep(1000);
 		exposurePage.clickSave();
 		Thread.sleep(1000);
@@ -283,7 +294,7 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 10)
 	public void verifyEmploymentDetails() throws InterruptedException {
 		LoggerUtil.info("Employment Details test started");
-		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		Thread.sleep(1000);
 		custRegHomePage.navigateToEmploymentTab();
@@ -299,12 +310,12 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 11)
 	public void verifyRelationshipDetails() throws InterruptedException {
 		LoggerUtil.info("Relationship Details test started");
-		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
 		Thread.sleep(1000);
-		custRegHomePage.clickRelationshipMasterTab();
+		custRegHomePage.navigateToRelationshipMasterTab();
 		Thread.sleep(1000);
-		custRegHomePage.clickAddRelationship();
+		custRegHomePage.clickAddRelationshipBtn();
 		Thread.sleep(1000);
 		relationshipPage.setKycCategory("Family");
 		Thread.sleep(1000);
@@ -332,11 +343,11 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 12)
 	public void verifyRelationshipIdentity() throws InterruptedException {
 		LoggerUtil.info("Relationship Identity Details test started");
-		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
-		custRegHomePage.clickRelationshipMasterTab();
-		Thread.sleep(1000);
-		custRegHomePage.clickAddRelationship();
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
+		custRegHomePage.navigateToRelationshipMasterTab();
+		Thread.sleep(1000);
+		custRegHomePage.clickAddRelationshipBtn();
 		relationshipIdentityPage.clickIdentityTab();
 		Thread.sleep(1000);
 		relationshipIdentityPage.clickAddIdentity();
@@ -349,7 +360,8 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		relationshipIdentityPage.selectIssueDate("2021", "January", "1");
 		Thread.sleep(1000);
-		relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January", "1");
+		relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January",
+				"1");
 		Thread.sleep(1000);
 		// relationshipIdentityPage.uploadDocument("C:\\path\\to\\doc.jpg"); // Skip
 		// upload for now as it needs a real file
@@ -361,10 +373,11 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 13)
 	public void verifyRelationshipCommunication() throws InterruptedException {
 		LoggerUtil.info("Relationship Communication Details test started");
-		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
-		custRegHomePage.clickRelationshipMasterTab();
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+
+		custRegHomePage.navigateToRelationshipMasterTab();
 		Thread.sleep(1000);
-		custRegHomePage.clickAddRelationship();
+		custRegHomePage.clickAddRelationshipBtn();
 		Thread.sleep(3000);
 		relationshipCommunicationPage.clickCommunicationTab();
 		Thread.sleep(1000);
@@ -381,17 +394,16 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 14)
 	public void verifyRelationshipDocument() throws InterruptedException {
 		LoggerUtil.info("Relationship Document Details test started");
-		custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
-		custRegHomePage.clickRelationshipMasterTab();
-		Thread.sleep(1000);
-		custRegHomePage.clickAddRelationship();
-		Thread.sleep(3000);
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
 
+		custRegHomePage.navigateToRelationshipMasterTab();
+		Thread.sleep(1000);
+		custRegHomePage.clickAddRelationshipBtn();
+		Thread.sleep(3000);
 		relationshipDocumentPage.clickDocumentTab();
 		Thread.sleep(1000);
 		relationshipDocumentPage.clickAddDocument();
 		Thread.sleep(1000);
-
 		relationshipDocumentPage.selectDocumentType("Citizenship");
 		Thread.sleep(1000);
 		relationshipDocumentPage.enterDocumentTitle("Citizenship Front");
@@ -403,6 +415,47 @@ public class CusRegTest extends BaseTestSequential {
 		// relationshipDocumentPage.uploadDocument("C:\\path\\to\\doc.png");
 
 		relationshipDocumentPage.clickSave();
+		Thread.sleep(2000);
+	}
+
+	@Test(priority = 15)
+	public void verifyRelationshipAddress() throws InterruptedException {
+		LoggerUtil.info("Relationship Address Details test started");
+		// custRegHomePage.searchAndEditDraftCustomer("RAM BAHADUR KARKI");
+
+		custRegHomePage.navigateToRelationshipMasterTab();
+		Thread.sleep(1000);
+		custRegHomePage.clickAddRelationshipBtn();
+		Thread.sleep(3000);
+		relationshipAddressPage.clickAddressTab();
+		Thread.sleep(1000);
+		relationshipAddressPage.clickAddAddress();
+		Thread.sleep(1000);
+		relationshipAddressPage.selectAddressType("Permanent");
+		Thread.sleep(1000);
+		relationshipAddressPage.selectState("Bagmati");
+		Thread.sleep(1000);
+		relationshipAddressPage.selectDistrict("Kathmandu");
+		Thread.sleep(1000);
+		relationshipAddressPage.selectTownship("Kathmandu Metropolitan City");
+		Thread.sleep(1000);
+		relationshipAddressPage.selectQuarter("Baluwatar");
+		Thread.sleep(1000);
+		relationshipAddressPage.enterPostalCode("44600");
+		Thread.sleep(1000);
+		relationshipAddressPage.enterStreet("Main Street");
+		Thread.sleep(1000);
+		relationshipAddressPage.enterWardNo("4");
+		Thread.sleep(1000);
+		relationshipAddressPage.enterHouseNo("123");
+		Thread.sleep(1000);
+		relationshipAddressPage.enterLatitude("27.7172");
+		Thread.sleep(1000);
+		relationshipAddressPage.enterLongitude("85.3240");
+		Thread.sleep(1000);
+		// relationshipAddressPage.uploadDocument("C:\\path\\to\\doc.png");
+
+		relationshipAddressPage.clickSave();
 		Thread.sleep(2000);
 	}
 }

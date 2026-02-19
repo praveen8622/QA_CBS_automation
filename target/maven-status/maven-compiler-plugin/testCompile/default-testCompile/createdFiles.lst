@@ -12,6 +12,8 @@ pages\CustExposurePage.class
 pages\CustRelationshipPage.class
 base\BaseTestSequential.class
 utilities\LoggerUtil.class
+pages\CustRelationshipDocumentPage.class
+pages\CustRelationshipAddressPage.class
 utilities\WaitUtils.class
 pages\CustRegHomepage.class
 pages\HomePage.class
@@ -22,3 +24,4 @@ tests\NewTest.class
 utilities\ConfigReader.class
 pages\CustAddressPage.class
 helper\LoginHelper.class
+pages\CustRelationshipCommunication.class

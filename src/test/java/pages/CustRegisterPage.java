@@ -30,6 +30,7 @@ public class CustRegisterPage extends BasePage {
 	private By foreignResidentLocator = By.xpath("//input[@aria-label='Foreign Residential Country']");
 	private By pepLocator = By.xpath("//input[@aria-label='PEP Category']");
 	private By genderLocator = By.xpath("//input[@aria-label='Gender']");
+	private By onboardingChannelLocator = By.xpath("//input[@aria-label='Onboarding Channel']");
 	private By maritalStatusLocator = By.xpath("//input[@aria-label='Marital Status']");
 	private By religionLocator = By.xpath("//input[@aria-label='Religion']");
 	private By educationLocator = By.xpath("//input[@aria-label='Education']");
@@ -153,6 +154,11 @@ public class CustRegisterPage extends BasePage {
 	public void selectGender(String genderValue) {
 		LoggerUtil.info("Selecting '" + genderValue + "' from Gender dropdown");
 		selectFromGenderDropdown(genderLocator, genderValue);
+	}
+
+	public void selectOnboardingChannel(String onboardingChannelValue) {
+		LoggerUtil.info("Selecting '" + onboardingChannelValue + "' from Onboarding Channel dropdown");
+		selectFromDropdown(onboardingChannelLocator, onboardingChannelValue);
 	}
 
 	public void selectMaritalStatus(String maritalStatusValue) {
