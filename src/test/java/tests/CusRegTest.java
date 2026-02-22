@@ -17,6 +17,7 @@ import pages.CustRelationshipIdentityPage;
 import pages.CustRelationshipAddressPage;
 import pages.CustRelationshipDocumentPage;
 import pages.CustRelationshipPage;
+import pages.CustScreeningPage;
 import pages.CustRegHomepage;
 import pages.CustRegisterPage;
 import pages.CustRelationshipCommunication;
@@ -44,6 +45,7 @@ public class CusRegTest extends BaseTestSequential {
 	private CustRelationshipAddressPage relationshipAddressPage;
 	private CustRegHomepage custRegHomePage;
 	private HomePage homePage;
+	private CustScreeningPage custScreeningPage;
 
 	@BeforeClass
 	public void pageSetup() {
@@ -64,6 +66,7 @@ public class CusRegTest extends BaseTestSequential {
 		relationshipDocumentPage = new CustRelationshipDocumentPage(driver);
 		relationshipAddressPage = new CustRelationshipAddressPage(driver);
 		custRegHomePage = new CustRegHomepage(driver);
+		custScreeningPage = new CustScreeningPage(driver);
 	}
 
 	@BeforeMethod
@@ -89,14 +92,20 @@ public class CusRegTest extends BaseTestSequential {
 		relationshipDocumentPage.setSoftAssert(softAssert);
 		relationshipAddressPage.setSoftAssert(softAssert);
 		custRegHomePage.setSoftAssert(softAssert);
+		custScreeningPage.setSoftAssert(softAssert);
 	}
 
 	@Test(priority = 1)
 	public void verifyCustomerRegistration() throws InterruptedException {
 		LoggerUtil.info("Registration test started");
+		// Generate screening id
+		homePage.navigateToCustomerScreening();
+		custScreeningPage.enterFullName("Bahadur Karki");
+		custScreeningPage.clickSearch();
+		// Capture Screening Id
+		String screeningId = custScreeningPage.getScreeningId();
 
-		// customer reg individual master
-
+		// Navigate and start Customer registration
 		homePage.navigateToCustomerRegistration();
 		custRegHomePage.clickAddCustomerRegistration();
 
@@ -106,13 +115,13 @@ public class CusRegTest extends BaseTestSequential {
 		}
 
 		reg.chooseLegalStatus("Individual");
-		reg.enterScreeningId("73");
+		reg.enterScreeningId(screeningId);
 		Thread.sleep(1000);
 		reg.isEmployee("No");
 		Thread.sleep(1000);
-		reg.enterCustomerName("Prakash", "Bahadur", "Karki");
-		reg.enterCustomerNameLocal("प्रकाश", "बाहादुर", "कारकि");
-		reg.enterMaidenName("Karki");
+		// reg.enterCustomerName("Prakash", "Bahadur", "Karki");
+		// reg.enterCustomerNameLocal("प्रकाश", "बाहादुर", "कारकि");
+		// reg.enterMaidenName("Karki");
 		Thread.sleep(1000);
 		reg.selectBirthDate("1995", "March", "29");
 		Thread.sleep(1000);
@@ -142,7 +151,8 @@ public class CusRegTest extends BaseTestSequential {
 
 		identityPage.openAddIdentityForm();
 		Thread.sleep(1000);
-		identityPage.selectIdentityTypeAndFillConditionalField("Driver’s License", "Bagmati Province");
+		identityPage.selectIdentityTypeAndFillConditionalField("Driver’s License",
+				"Bagmati Province");
 		identityPage.enterIdentityNumber(DataGenerator.generateRandomLicense());
 		Thread.sleep(1000);
 		identityPage.selectIssueDate("2020", "March", "29");
@@ -312,7 +322,8 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		exposurePage.clickAdd();
 		Thread.sleep(1000);
-		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans", "500000", "12", "60");
+		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans",
+				"500000", "12", "60");
 		Thread.sleep(1000);
 		exposurePage.clickSave();
 		Thread.sleep(1000);
@@ -328,7 +339,8 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		employmentPage.clickAdd();
 		Thread.sleep(1000);
-		employmentPage.enterEmploymentDetails("Salaried", "Engineer", "Manager", "Tech Corp", "Kathmandu", "1200000");
+		employmentPage.enterEmploymentDetails("Salaried", "Engineer", "Manager",
+				"Tech Corp", "Kathmandu", "1200000");
 		Thread.sleep(1000);
 		employmentPage.clickSave();
 		Thread.sleep(1000);

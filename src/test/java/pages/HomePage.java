@@ -13,6 +13,8 @@ public class HomePage extends BasePage {
     private By navCustregLocator = By.xpath("//p[normalize-space()='Customer Management']");
     private By custRegLocator = By.xpath("//p[normalize-space()='Customer Registration']");
     private By titleTextLocator = By.xpath("//p[normalize-space()='Customer Registration List']");
+    private By custScreeningLocator = By.xpath("//p[normalize-space()='Customer Screening']");
+    private By titleScreeningPageSearchLocator = By.xpath("//label[normalize-space()='Search By:']");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -29,6 +31,15 @@ public class HomePage extends BasePage {
         click(custRegLocator);
         assertElementVisible(titleTextLocator, "Customer Registration page not loaded successfully");
 
+    }
+
+    public void navigateToCustomerScreening() {
+        LoggerUtil.info("Clicking 'Customer Management' menu");
+        click(navCustregLocator);
+
+        LoggerUtil.info("Clicking 'Customer Screening' submenu");
+        click(custScreeningLocator);
+        assertElementVisible(titleScreeningPageSearchLocator, "Customer Screening page not loaded successfully");
     }
 
 }

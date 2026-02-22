@@ -1,261 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-22T15:40:33 NPT" name="Suite" finished-at="2026-02-22T15:43:38 NPT" duration-ms="185491">
+  <suite started-at="2026-02-22T16:14:22 NPT" name="Suite" finished-at="2026-02-22T16:14:52 NPT" duration-ms="30027">
     <groups>
     </groups>
-    <test started-at="2026-02-22T15:40:33 NPT" name="Chrome Test" finished-at="2026-02-22T15:43:38 NPT" duration-ms="185491">
+    <test started-at="2026-02-22T16:14:22 NPT" name="Chrome Test" finished-at="2026-02-22T16:14:52 NPT" duration-ms="30027">
       <class name="tests.CusRegTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:40:33 NPT" name="setUp" finished-at="2026-02-22T15:40:48 NPT" duration-ms="15649" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:22 NPT" name="setUp" finished-at="2026-02-22T16:14:38 NPT" duration-ms="16816" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:40:48 NPT" name="pageSetup" finished-at="2026-02-22T15:40:48 NPT" duration-ms="20" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:38 NPT" name="pageSetup" finished-at="2026-02-22T16:14:38 NPT" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:40:48 NPT" name="initSoftAssert" finished-at="2026-02-22T15:40:48 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:38 NPT" name="initSoftAssert" finished-at="2026-02-22T16:14:38 NPT" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:40:48 NPT" name="verifyCustomerRegistration" finished-at="2026-02-22T15:41:02 NPT" duration-ms="13097" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:38 NPT" name="setupSoftAssert" finished-at="2026-02-22T16:14:38 NPT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:38 NPT" name="verifyCustomerRegistration" finished-at="2026-02-22T16:14:52 NPT" duration-ms="13125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerRegistration -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:40:48 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:40:48 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:02 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:41:02 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:02 NPT" name="initSoftAssert" finished-at="2026-02-22T15:41:02 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:02 NPT" name="verifyIdentityDetails" finished-at="2026-02-22T15:41:12 NPT" duration-ms="10181" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyIdentityDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:02 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:41:02 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:12 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:41:12 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:12 NPT" name="initSoftAssert" finished-at="2026-02-22T15:41:12 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:12 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:41:12 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:12 NPT" name="verifyCommunicationDetails" finished-at="2026-02-22T15:41:20 NPT" duration-ms="8546" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCommunicationDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:20 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:41:20 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:20 NPT" name="verifyDocumentDetails" finished-at="2026-02-22T15:41:23 NPT" duration-ms="2339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDocumentDetails -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:20 NPT" name="initSoftAssert" finished-at="2026-02-22T15:41:20 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:20 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:41:20 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:23 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:41:23 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:52 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T16:14:52 NPT" duration-ms="0" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+Bahadur Karki expected [Bahadur Karki] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+Bahadur Karki expected [Bahadur Karki] but found []
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at base.BaseTestSequential.tearDownSoftAssert(BaseTestSequential.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:393)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:326)
+at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
+at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:779)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:755)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:23 NPT" name="initSoftAssert" finished-at="2026-02-22T15:41:23 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:23 NPT" name="verifyAddressDetails" finished-at="2026-02-22T15:41:39 NPT" duration-ms="16285" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddressDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:23 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:41:23 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:39 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:41:39 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:39 NPT" name="initSoftAssert" finished-at="2026-02-22T15:41:39 NPT" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:39 NPT" name="verifyHighProfileDetails" finished-at="2026-02-22T15:41:59 NPT" duration-ms="19755" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHighProfileDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:39 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:41:39 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:59 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:41:59 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:59 NPT" name="initSoftAssert" finished-at="2026-02-22T15:41:59 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:59 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:41:59 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:41:59 NPT" name="verifyTransactionDetails" finished-at="2026-02-22T15:42:03 NPT" duration-ms="4132" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyTransactionDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:03 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:42:03 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:03 NPT" name="verifyCashFlowDetails" finished-at="2026-02-22T15:42:09 NPT" duration-ms="6424" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCashFlowDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:03 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:42:03 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:03 NPT" name="initSoftAssert" finished-at="2026-02-22T15:42:03 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:09 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:42:09 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:09 NPT" name="initSoftAssert" finished-at="2026-02-22T15:42:09 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:09 NPT" name="verifyExposureDetails" finished-at="2026-02-22T15:42:16 NPT" duration-ms="6802" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyExposureDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:09 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:42:09 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:16 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:42:16 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:16 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:42:16 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:16 NPT" name="initSoftAssert" finished-at="2026-02-22T15:42:16 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyEmploymentDetails()[pri:10, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:16 NPT" name="verifyEmploymentDetails" finished-at="2026-02-22T15:42:23 NPT" duration-ms="6851" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyEmploymentDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:23 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:42:23 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:23 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:42:23 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:23 NPT" name="initSoftAssert" finished-at="2026-02-22T15:42:23 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipDetails()[pri:11, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:23 NPT" name="verifyRelationshipDetails" finished-at="2026-02-22T15:42:43 NPT" duration-ms="20096" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:43 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:42:43 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:43 NPT" name="initSoftAssert" finished-at="2026-02-22T15:42:43 NPT" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:43 NPT" name="verifyRelationshipIdentity" finished-at="2026-02-22T15:42:56 NPT" duration-ms="13200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipIdentity -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:43 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:42:43 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:56 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:42:56 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:56 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:42:56 NPT" duration-ms="14" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:56 NPT" name="initSoftAssert" finished-at="2026-02-22T15:42:56 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipCommunication()[pri:13, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:42:56 NPT" name="verifyRelationshipCommunication" finished-at="2026-02-22T15:43:05 NPT" duration-ms="9241" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipCommunication -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:05 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:43:05 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:05 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:43:05 NPT" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:05 NPT" name="initSoftAssert" finished-at="2026-02-22T15:43:05 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipDocument()[pri:14, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:05 NPT" name="verifyRelationshipDocument" finished-at="2026-02-22T15:43:18 NPT" duration-ms="12165" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipDocument -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:18 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:43:18 NPT" duration-ms="7" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method signature="verifyRelationshipAddress()[pri:15, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:18 NPT" name="verifyRelationshipAddress" finished-at="2026-02-22T15:43:37 NPT" duration-ms="19478" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipAddress -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:18 NPT" name="initSoftAssert" finished-at="2026-02-22T15:43:18 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:18 NPT" name="setupSoftAssert" finished-at="2026-02-22T15:43:18 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:37 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T15:43:37 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@781f10f2]" started-at="2026-02-22T15:43:37 NPT" name="tearDown" finished-at="2026-02-22T15:43:38 NPT" duration-ms="1085" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@68fa0ba8]" started-at="2026-02-22T16:14:52 NPT" name="tearDown" finished-at="2026-02-22T16:14:52 NPT" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
