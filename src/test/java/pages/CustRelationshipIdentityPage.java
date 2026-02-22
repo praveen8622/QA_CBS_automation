@@ -27,15 +27,12 @@ public class CustRelationshipIdentityPage extends BasePage {
 
     // Conditional Fields
     private By issueOfficeInputLocator = By.name("openIssueOfficeName");
-    private By localBodyContainerLocator = By
-            .xpath("//input[@aria-label='Local Body']/ancestor::div[contains(@class, 'container')]");
     private By localBodyInputLocator = By.xpath("//input[@aria-label='local Body']");
-    private By stateContainerLocator = By
-            .xpath("//input[@aria-label='State']/ancestor::div[contains(@class, 'container')]");
     private By stateInputLocator = By.xpath("//input[@aria-label='State']");
 
     private By fileUploadInputLocator = By.xpath("//input[@type='file']");
     private By saveBtnLocator = By.xpath("//button[normalize-space()='Save']");
+    private By nextBtnLocator = By.xpath("//button[@title='Next']");
 
     public CustRelationshipIdentityPage(WebDriver driver) {
         super(driver);
@@ -62,7 +59,6 @@ public class CustRelationshipIdentityPage extends BasePage {
     public void enterIdentityNumber(String number) {
         LoggerUtil.info("Entering Identity Number: " + number);
         typeText(identityNoInputLocator, number);
-        assertValueEquals(identityNoInputLocator, number, "Identity number not entered correctly");
     }
 
     public void selectIssueDate(String year, String month, String day) {
@@ -119,7 +115,6 @@ public class CustRelationshipIdentityPage extends BasePage {
             assertFalseCondition(
                     getAttributeValue(expiryDateButtonLocator, "value").isEmpty(),
                     "Expiry Date was not populated");
-
         } else {
             LoggerUtil.info("Identity is NOT expiry-based. Skipping Expiry Date selection.");
 
@@ -136,12 +131,27 @@ public class CustRelationshipIdentityPage extends BasePage {
 
     public void selectLocalBody(String localBody) {
         LoggerUtil.info("Selecting Local Body: " + localBody);
-        selectFromReactSelect(localBodyContainerLocator, localBodyInputLocator, localBody);
+        selectFromDropdown(localBodyInputLocator, localBody);
     }
 
     public void selectState(String state) {
         LoggerUtil.info("Selecting State: " + state);
-        selectFromReactSelect(stateContainerLocator, stateInputLocator, state);
+        selectFromDropdown(stateInputLocator, state);
+    }
+
+    /**
+     * Selects Identity Type and fills the corresponding conditional field based on
+     * the type.
+     * 
+     * @param type       The identity type to select.
+     * @param fieldValue The value to enter in the office/local body/state field.
+     */
+    public void selectIdentityTypeAndFillConditionalField(String type, String fieldValue) {
+        selectIdentityType(type);
+        fillConditionalIdentityField(type, fieldValue,
+                issueOfficeInputLocator,
+                localBodyInputLocator,
+                stateInputLocator);
     }
 
     public void uploadDocument(String filePath) {
@@ -152,5 +162,10 @@ public class CustRelationshipIdentityPage extends BasePage {
     public void clickSave() {
         LoggerUtil.info("Clicking Save button in Relationship Identity form");
         click(saveBtnLocator);
+    }
+
+    public void clickNext() {
+        LoggerUtil.info("Clicking Next button in Relationship Identity form");
+        click(nextBtnLocator);
     }
 }

@@ -20,6 +20,7 @@ public class CustRelationshipCommunication extends BasePage {
     private By deviceNumberInputLocator = By.name("deviceNo");
 
     private By saveCommunicationBtnLocator = By.xpath("//button[normalize-space()='Save']");
+    private By nextBtnLocator = By.xpath("//button[@title='Next']");
 
     public CustRelationshipCommunication(WebDriver driver) {
         super(driver);
@@ -47,10 +48,16 @@ public class CustRelationshipCommunication extends BasePage {
     public void enterCommunicationNumber(String number) {
         LoggerUtil.info("Entering Communication Number: " + number);
         typeText(deviceNumberInputLocator, number);
+        assertValueEquals(deviceNumberInputLocator, number, "Relationship Communication Number mismatch");
     }
 
     public void clickSaveCommunication() {
         LoggerUtil.info("Clicking Save button in Communication form");
         click(saveCommunicationBtnLocator);
+    }
+
+    public void clickNext() {
+        LoggerUtil.info("Clicking Next button in Communication form");
+        click(nextBtnLocator);
     }
 }

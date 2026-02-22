@@ -46,7 +46,7 @@ public class CustRelationshipPage extends BasePage {
             .xpath("//input[@aria-label='educationId']/ancestor::div[contains(@class, 'container')]");
     private By educationInputBy = By.xpath("//input[@aria-label='educationId']");
 
-    private By nextBtnBy = By.xpath("//button[normalize-space()='Next']");
+    private By nextBtnBy = By.xpath("//button[@title='Next']");
 
     public CustRelationshipPage(WebDriver driver) {
         super(driver);

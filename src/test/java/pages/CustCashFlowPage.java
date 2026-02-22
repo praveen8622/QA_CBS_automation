@@ -45,6 +45,7 @@ public class CustCashFlowPage extends BasePage {
         selectFromReactSelect(headingNameContainerLocator, headingNameInputLocator, heading);
         selectFromReactSelect(frequencyContainerLocator, frequencyInputLocator, frequency);
         typeText(amountInputLocator, amount);
+        assertValueEquals(amountInputLocator, amount, "Amount mismatch in Cash Flow");
     }
 
     public void clickSave() {

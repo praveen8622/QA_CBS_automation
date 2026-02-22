@@ -51,8 +51,11 @@ public class CustEmploymentPage extends BasePage {
         selectFromReactSelect(primaryOccupationContainerBy, primaryOccupationInputBy, occupation);
         selectFromReactSelect(designationContainerBy, designationInputBy, designation);
         typeText(organizationInputBy, org);
+        assertValueEquals(organizationInputBy, org, "Organization Name mismatch");
         typeText(addressInputBy, addr);
+        assertValueEquals(addressInputBy, addr, "Employment Address mismatch");
         typeText(incomeInputBy, income);
+        assertValueEquals(incomeInputBy, income, "Annual Income mismatch");
     }
 
     public void clickSave() {

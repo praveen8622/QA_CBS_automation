@@ -28,6 +28,7 @@ public class CustRelationshipDocumentPage extends BasePage {
 
     private By fileUploadInputLocator = By.xpath("//input[@type='file']");
     private By saveBtnLocator = By.xpath("//button[normalize-space()='Save']");
+    private By nextBtnLocator = By.xpath("//button[@title='Next']");
 
     public CustRelationshipDocumentPage(WebDriver driver) {
         super(driver);
@@ -55,11 +56,13 @@ public class CustRelationshipDocumentPage extends BasePage {
     public void enterDocumentTitle(String title) {
         LoggerUtil.info("Entering Document Title: " + title);
         typeText(documentTitleInputLocator, title);
+        assertValueEquals(documentTitleInputLocator, title, "Relationship Document Title mismatch");
     }
 
     public void enterDocumentNumber(String number) {
         LoggerUtil.info("Entering Document Number: " + number);
         typeText(documentNoInputLocator, number);
+        assertValueEquals(documentNoInputLocator, number, "Relationship Document Number mismatch");
     }
 
     public void selectMimeType(String mime) {
@@ -75,5 +78,10 @@ public class CustRelationshipDocumentPage extends BasePage {
     public void clickSave() {
         LoggerUtil.info("Clicking Save button in Relationship Document form");
         click(saveBtnLocator);
+    }
+
+    public void clickNext() {
+        LoggerUtil.info("Clicking Next button in Relationship Document form");
+        click(nextBtnLocator);
     }
 }

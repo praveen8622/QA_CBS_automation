@@ -94,11 +94,13 @@ public class CustHighProfilePage extends BasePage {
     public void enterFullName(String fullName) {
         LoggerUtil.info("Typing '" + fullName + "' into Full Name field");
         typeText(fullNameInputLocator, fullName);
+        assertValueEquals(fullNameInputLocator, fullName, "Full Name mismatch");
     }
 
     public void enterFullNameLocal(String fullNameLocal) {
         LoggerUtil.info("Typing '" + fullNameLocal + "' into Full Name (Local) field");
         typeText(fullNameLocalInputLocator, fullNameLocal);
+        assertValueEquals(fullNameLocalInputLocator, fullNameLocal, "Full Name (Local) mismatch");
     }
 
     public void selectGender(String gender) {
@@ -149,6 +151,7 @@ public class CustHighProfilePage extends BasePage {
     public void enterPosition(String position) {
         LoggerUtil.info("Typing '" + position + "' into Position field");
         typeText(positionInputLocator, position);
+        assertValueEquals(positionInputLocator, position, "Position mismatch");
     }
 
     public void clickSave() {

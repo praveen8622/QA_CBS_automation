@@ -85,21 +85,25 @@ public class CustAddressPage extends BasePage {
     public void enterPostalCode(String postalCode) {
         LoggerUtil.info("Typing '" + postalCode + "' into Postal Code field");
         typeText(postalCodeInputLocator, postalCode);
+        assertValueEquals(postalCodeInputLocator, postalCode, "Postal Code mismatch");
     }
 
     public void enterStreet(String street) {
         LoggerUtil.info("Typing '" + street + "' into Street field");
         typeText(streetInputLocator, street);
+        assertValueEquals(streetInputLocator, street, "Street mismatch");
     }
 
     public void enterWardNo(String wardNo) {
         LoggerUtil.info("Typing '" + wardNo + "' into Ward No field");
         typeText(wardNoInputLocator, wardNo);
+        assertValueEquals(wardNoInputLocator, wardNo, "Ward No mismatch");
     }
 
     public void enterHouseNo(String houseNo) {
         LoggerUtil.info("Typing '" + houseNo + "' into House No field");
         typeText(houseNoInputLocator, houseNo);
+        assertValueEquals(houseNoInputLocator, houseNo, "House No mismatch");
     }
 
     public void clickOpenMap() {
@@ -110,11 +114,13 @@ public class CustAddressPage extends BasePage {
     public void enterLatitude(String latitude) {
         LoggerUtil.info("Typing '" + latitude + "' into Latitude field");
         typeText(latitudeInputLocator, latitude);
+        assertValueEquals(latitudeInputLocator, latitude, "Latitude mismatch");
     }
 
     public void enterLongitude(String longitude) {
         LoggerUtil.info("Typing '" + longitude + "' into Longitude field");
         typeText(longitudeInputLocator, longitude);
+        assertValueEquals(longitudeInputLocator, longitude, "Longitude mismatch");
     }
 
     public void uploadAddressDocument(String filePath) {

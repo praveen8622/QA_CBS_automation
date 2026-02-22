@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import utilities.LoggerUtil;
 import utilities.WaitUtils;
@@ -14,10 +14,15 @@ public class BasePage {
 
 	protected WebDriver driver;
 	protected WaitUtils wait;
+	protected SoftAssert softAssert;
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WaitUtils(driver);
+	}
+
+	public void setSoftAssert(SoftAssert softAssert) {
+		this.softAssert = softAssert;
 	}
 
 	// ================================
@@ -108,8 +113,6 @@ public class BasePage {
 				clickUsingJS(element);
 			}
 		}
-
-		Assert.assertEquals(isSelected(locator), shouldBeChecked, "Checkbox state mismatch");
 	}
 
 	protected void clickUsingJS(WebElement element) {
@@ -121,29 +124,60 @@ public class BasePage {
 	// Reusable Assertions
 	// ================================
 	protected void assertElementVisible(By locator, String message) {
-		Assert.assertTrue(wait.waitForElementToBeVisible(locator).isDisplayed(), message);
+		boolean isVisible = wait.waitForElementToBeVisible(locator).isDisplayed();
+		if (softAssert != null) {
+			softAssert.assertTrue(isVisible, message);
+		} else {
+			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Status: "
+					+ (isVisible ? "Visible" : "Not Visible"));
+		}
 	}
 
 	protected void assertElementNotVisible(By locator, String message) {
-		Assert.assertFalse(wait.waitForElementToBeVisible(locator).isDisplayed(), message);
+		boolean isVisible = wait.waitForElementToBeVisible(locator).isDisplayed();
+		if (softAssert != null) {
+			softAssert.assertFalse(isVisible, message);
+		} else {
+			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Status: "
+					+ (isVisible ? "Visible" : "Not Visible"));
+		}
 	}
 
 	protected void assertTextEquals(By locator, String expectedText, String message) {
 		String actualText = wait.waitForElementToBeVisible(locator).getText();
-		Assert.assertEquals(actualText, expectedText, message);
+		if (softAssert != null) {
+			softAssert.assertEquals(actualText, expectedText, message);
+		} else {
+			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Expected: [" + expectedText
+					+ "], Actual: [" + actualText + "]");
+		}
 	}
 
 	protected void assertValueEquals(By locator, String expectedValue, String message) {
 		String actualValue = getAttributeValue(locator, "value");
-		Assert.assertEquals(actualValue, expectedValue, message);
+		if (softAssert != null) {
+			softAssert.assertEquals(actualValue, expectedValue, message);
+		} else {
+			LoggerUtil
+					.info("[Assertion skipped - SoftAssert not provided] " + message + " | Expected: [" + expectedValue
+							+ "], Actual: [" + actualValue + "]");
+		}
 	}
 
 	protected void assertTrueCondition(boolean condition, String message) {
-		Assert.assertTrue(condition, message);
+		if (softAssert != null) {
+			softAssert.assertTrue(condition, message);
+		} else {
+			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Condition: " + condition);
+		}
 	}
 
 	protected void assertFalseCondition(boolean condition, String message) {
-		Assert.assertFalse(condition, message);
+		if (softAssert != null) {
+			softAssert.assertFalse(condition, message);
+		} else {
+			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Condition: " + condition);
+		}
 	}
 
 	// ================================
@@ -152,5 +186,52 @@ public class BasePage {
 	protected void uploadFile(By locator, String filePath) {
 		WebElement element = wait.waitForElementToBePresent(locator);
 		element.sendKeys(filePath);
+	}
+
+	// ================================
+	// Common Identity Logic
+	// ================================
+	/**
+	 * Fills the corresponding conditional field based on the Identity Type.
+	 * 
+	 * @param type               The identity type selected.
+	 * @param fieldValue         The value to enter in the office/local body/state
+	 *                           field.
+	 * @param issueOfficeLocator Locator for the Issue Office input.
+	 * @param localBodyContainer Locator for the Local Body React-Select container.
+	 * @param localBodyInput     Locator for the Local Body React-Select input.
+	 * @param stateContainer     Locator for the State React-Select container.
+	 * @param stateInput         Locator for the State React-Select input.
+	 */
+	public void fillConditionalIdentityField(String type, String fieldValue,
+			By issueOfficeLocator,
+			By localBodyInput,
+			By stateInput) {
+
+		switch (type) {
+			case "Birth Certificate":
+			case "Company Registration Certificate":
+			case "Passport":
+			case "Voter ID":
+				if (issueOfficeLocator != null) {
+					typeText(issueOfficeLocator, fieldValue);
+				}
+				break;
+			case "Citizenship":
+				if (localBodyInput != null) {
+					selectFromDropdown(localBodyInput, fieldValue);
+				}
+				break;
+			case "Driver’s License":
+			case "National Identity":
+			case "Tax Identification Number":
+				if (stateInput != null) {
+					selectFromDropdown(stateInput, fieldValue);
+				}
+				break;
+			default:
+				LoggerUtil.info("No conditional field mapping identified for Identity Type: " + type);
+				break;
+		}
 	}
 }

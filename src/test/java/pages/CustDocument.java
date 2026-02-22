@@ -33,11 +33,13 @@ public class CustDocument extends BasePage {
 	public void enterDocumentTitle(String title) {
 		LoggerUtil.info("Entering Document Title: " + title);
 		typeText(documentTitleInputLocator, title);
+		assertValueEquals(documentTitleInputLocator, title, "Document Title mismatch");
 	}
 
 	public void enterDocumentNumber(String number) {
 		LoggerUtil.info("Entering Document Number: " + number);
 		typeText(documentNoInputLocator, number);
+		assertValueEquals(documentNoInputLocator, number, "Document Number mismatch");
 	}
 
 	public void uploadDocument(String filePath) {

@@ -44,6 +44,7 @@ public class CustRelationshipAddressPage extends BasePage {
 
     private By fileUploadInputLocator = By.xpath("//input[@type='file']");
     private By saveBtnLocator = By.xpath("//button[normalize-space()='Save']");
+    private By nextBtnLocator = By.xpath("//button[@title='Next']");
 
     public CustRelationshipAddressPage(WebDriver driver) {
         super(driver);
@@ -91,21 +92,25 @@ public class CustRelationshipAddressPage extends BasePage {
     public void enterPostalCode(String code) {
         LoggerUtil.info("Entering Postal Code: " + code);
         typeText(postalCodeInputLocator, code);
+        assertValueEquals(postalCodeInputLocator, code, "Relationship Postal Code mismatch");
     }
 
     public void enterStreet(String street) {
         LoggerUtil.info("Entering Street: " + street);
         typeText(streetInputLocator, street);
+        assertValueEquals(streetInputLocator, street, "Relationship Street mismatch");
     }
 
     public void enterWardNo(String ward) {
         LoggerUtil.info("Entering Ward No: " + ward);
         typeText(wardNoInputLocator, ward);
+        assertValueEquals(wardNoInputLocator, ward, "Relationship Ward No mismatch");
     }
 
     public void enterHouseNo(String house) {
         LoggerUtil.info("Entering House No: " + house);
         typeText(houseNoInputLocator, house);
+        assertValueEquals(houseNoInputLocator, house, "Relationship House No mismatch");
     }
 
     public void enterLatitude(String lat) {
@@ -126,5 +131,10 @@ public class CustRelationshipAddressPage extends BasePage {
     public void clickSave() {
         LoggerUtil.info("Clicking Save button in Relationship Address form");
         click(saveBtnLocator);
+    }
+
+    public void clickNext() {
+        LoggerUtil.info("Clicking Next button in Relationship Address form");
+        click(nextBtnLocator);
     }
 }

@@ -1,5 +1,6 @@
 pages\CustRelationshipIdentityPage.class
 pages\LoginPage.class
+utilities\DataGenerator.class
 pages\CustTransactionPage.class
 tests\CusRegTest.class
 pages\CustRegisterPage.class

@@ -12,6 +12,7 @@ public class HomePage extends BasePage {
     // =================================================
     private By navCustregLocator = By.xpath("//p[normalize-space()='Customer Management']");
     private By custRegLocator = By.xpath("//p[normalize-space()='Customer Registration']");
+    private By titleTextLocator = By.xpath("//p[normalize-space()='Customer Registration List']");
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -26,6 +27,8 @@ public class HomePage extends BasePage {
 
         LoggerUtil.info("Clicking 'Customer Registration' submenu");
         click(custRegLocator);
+        assertElementVisible(titleTextLocator, "Customer Registration page not loaded successfully");
+
     }
 
 }

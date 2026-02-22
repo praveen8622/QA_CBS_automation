@@ -12,6 +12,7 @@ public class CustRegisterPage extends BasePage {
 	// =================================================
 
 	private By formVisibleLocator = By.xpath("//label[@class='text-sm mb-1 block text-gray-600']");
+	private By individualCustomerHeaderLocator = By.xpath("//h4[normalize-space()='Individual Customer']");
 
 	// =================================================
 	// Personal Details Locators
@@ -91,6 +92,11 @@ public class CustRegisterPage extends BasePage {
 	public void chooseLegalStatus(String legalStatusValue) {
 		LoggerUtil.info("Selecting '" + legalStatusValue + "' from Legal Status dropdown");
 		selectFromDropdown(legalStatusLocator, legalStatusValue);
+
+		if (legalStatusValue.equalsIgnoreCase("Individual")) {
+			assertTextEquals(individualCustomerHeaderLocator, "Individual Customer",
+					"Individual Customer form not opened.");
+		}
 	}
 
 	public void enterCustomerName(String firstNameValue, String middleNameValue, String lastNameValue) {
@@ -220,6 +226,7 @@ public class CustRegisterPage extends BasePage {
 	public void clickNextButton() {
 		LoggerUtil.info("Clicking 'Next' button");
 		click(nextBtnLocator);
+
 	}
 
 	// =================================================

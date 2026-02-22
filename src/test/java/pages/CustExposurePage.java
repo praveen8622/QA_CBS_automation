@@ -48,10 +48,14 @@ public class CustExposurePage extends BasePage {
 
         selectFromReactSelect(instTypeContainerBy, instTypeInputBy, instType);
         typeText(instNameInputBy, instName);
+        assertValueEquals(instNameInputBy, instName, "Institution Name mismatch");
         selectFromReactSelect(productTypeContainerBy, productTypeInputBy, prodType);
         typeText(portfolioAmountInputBy, portfolio);
+        assertValueEquals(portfolioAmountInputBy, portfolio, "Portfolio Amount mismatch");
         typeText(averageIntRateInputBy, rate);
+        assertValueEquals(averageIntRateInputBy, rate, "Average Interest Rate mismatch");
         typeText(servicePeriodInputBy, period);
+        assertValueEquals(servicePeriodInputBy, period, "Service Period mismatch");
     }
 
     public void clickSave() {
