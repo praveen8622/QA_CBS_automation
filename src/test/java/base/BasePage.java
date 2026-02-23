@@ -1,6 +1,7 @@
 package base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -185,6 +186,8 @@ public class BasePage {
 	// ================================
 	protected void uploadFile(By locator, String filePath) {
 		WebElement element = wait.waitForElementToBePresent(locator);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].removeAttribute('style');", element);
 		element.sendKeys(filePath);
 	}
 

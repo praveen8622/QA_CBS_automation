@@ -31,7 +31,7 @@ public class CustIdentityPage extends BasePage {
 
 	private By expiryDateInputLocator = By.name("expiryDate");
 
-	private By documentUploadInputLocator = By.xpath("//input[@type='file']");
+	private By documentUploadInputLocator = By.xpath("//div[contains(@class,'dropzone')]//input[@type='file']");
 
 	private By exitButtonLocator = By.xpath("//button[.//text()[normalize-space()='Exit']]");
 
@@ -183,7 +183,7 @@ public class CustIdentityPage extends BasePage {
 
 	public void uploadIdentityDocument(String filePath) {
 		LoggerUtil.info("Uploading Identity Document from path: " + filePath);
-		typeText(documentUploadInputLocator, filePath);
+		uploadFile(documentUploadInputLocator, filePath);
 	}
 
 	// =================================================

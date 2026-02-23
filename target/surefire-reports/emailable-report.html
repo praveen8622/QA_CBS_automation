@@ -9,16 +9,118 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Chrome Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">30,027</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Chrome Test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">6</td><td class="num">131,675</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.CusRegTest</td><td><a href="#m0">tearDownSoftAssert</a></td><td rowspan="1">1771756192079</td><td rowspan="1">0</td></tr><tr><th colspan="4">Chrome Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">tests.CusRegTest</td><td><a href="#m1">tearDown</a></td><td rowspan="1">1771756192091</td><td rowspan="1">0</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.CusRegTest</td><td><a href="#m2">verifyCustomerRegistration</a></td><td rowspan="1">1771756178951</td><td rowspan="1">13125</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Chrome Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="6">tests.CusRegTest</td><td><a href="#m0">verifyEmploymentDetails</a></td><td rowspan="1">1771761585869</td><td rowspan="1">1037</td></tr><tr class="failedeven"><td><a href="#m1">verifyRelationshipAddress</a></td><td rowspan="1">1771761603455</td><td rowspan="1">5132</td></tr><tr class="failedeven"><td><a href="#m2">verifyRelationshipCommunication</a></td><td rowspan="1">1771761593143</td><td rowspan="1">5153</td></tr><tr class="failedeven"><td><a href="#m3">verifyRelationshipDetails</a></td><td rowspan="1">1771761586916</td><td rowspan="1">1032</td></tr><tr class="failedeven"><td><a href="#m4">verifyRelationshipDocument</a></td><td rowspan="1">1771761598299</td><td rowspan="1">5153</td></tr><tr class="failedeven"><td><a href="#m5">verifyRelationshipIdentity</a></td><td rowspan="1">1771761587953</td><td rowspan="1">5177</td></tr><tr><th colspan="4">Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">tests.CusRegTest</td><td><a href="#m6">verifyAddressDetails</a></td><td rowspan="1">1771761530132</td><td rowspan="1">18155</td></tr><tr class="passedeven"><td><a href="#m7">verifyCashFlowDetails</a></td><td rowspan="1">1771761572295</td><td rowspan="1">6098</td></tr><tr class="passedeven"><td><a href="#m8">verifyCommunicationDetails</a></td><td rowspan="1">1771761518227</td><td rowspan="1">8674</td></tr><tr class="passedeven"><td><a href="#m9">verifyCustomerRegistration</a></td><td rowspan="1">1771761494008</td><td rowspan="1">13530</td></tr><tr class="passedeven"><td><a href="#m10">verifyDocumentDetails</a></td><td rowspan="1">1771761526905</td><td rowspan="1">3224</td></tr><tr class="passedeven"><td><a href="#m11">verifyExposureDetails</a></td><td rowspan="1">1771761578397</td><td rowspan="1">7469</td></tr><tr class="passedeven"><td><a href="#m12">verifyHighProfileDetails</a></td><td rowspan="1">1771761548295</td><td rowspan="1">19663</td></tr><tr class="passedeven"><td><a href="#m13">verifyIdentityDetails</a></td><td rowspan="1">1771761507546</td><td rowspan="1">10675</td></tr><tr class="passedeven"><td><a href="#m14">verifyTransactionDetails</a></td><td rowspan="1">1771761567970</td><td rowspan="1">4322</td></tr></tbody>
 </table>
-<h2>Chrome Test</h2><h3 id="m0">tests.CusRegTest#tearDownSoftAssert</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Bahadur Karki expected [Bahadur Karki] but found []
-	at base.BaseTestSequential.tearDownSoftAssert(BaseTestSequential.java:48)
+<h2>Chrome Test</h2><h3 id="m0">tests.CusRegTest#verifyEmploymentDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;p class=&quot;text-start font-normal text-sm leading-150 shrink grow text-inherit&quot;&gt; is not clickable at point (168,532) because another element &lt;div class=&quot;flex min-h-full h-full text-center items-center justify-center&quot;&gt; obscures it
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [68b9b6a8-9a91-4209-bd80-d256214ae759, clickElement {id=21481cb4-5670-4881-8b84-40a82f030ea0}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (68b9b6a8-9a91-4209-bd80-d256214ae759)] -&gt; xpath: //p[normalize-space()=&apos;Employment Details&apos;]]
+Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at base.BasePage.click(BasePage.java:33)
+	at pages.CustRegHomepage.navigateToEmploymentTab(CustRegHomepage.java:165)
+	at tests.CusRegTest.verifyEmploymentDetails(CusRegTest.java:344)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.CusRegTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.CusRegTest#verifyCustomerRegistration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.CusRegTest#verifyRelationshipAddress</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()=&apos;Address&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
+	at base.BasePage.click(BasePage.java:33)
+	at pages.CustRelationshipAddressPage.clickAddressTab(CustRelationshipAddressPage.java:59)
+	at tests.CusRegTest.verifyRelationshipAddress(CusRegTest.java:482)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.CusRegTest#verifyRelationshipCommunication</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()=&apos;Communication&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
+	at base.BasePage.click(BasePage.java:33)
+	at pages.CustRelationshipCommunication.clickCommunicationTab(CustRelationshipCommunication.java:35)
+	at tests.CusRegTest.verifyRelationshipCommunication(CusRegTest.java:428)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.CusRegTest#verifyRelationshipDetails</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: Element &lt;div class=&quot;flex items-center flex-row justify-start flex-nowrap&quot;&gt; is not clickable at point (179,572) because another element &lt;div class=&quot;flex min-h-full h-full text-center items-center justify-center&quot;&gt; obscures it
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [68b9b6a8-9a91-4209-bd80-d256214ae759, clickElement {id=468e2ab3-289a-4ff6-9ae8-d53494f017f6}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Element: [[FirefoxDriver: firefox on windows (68b9b6a8-9a91-4209-bd80-d256214ae759)] -&gt; xpath: //div[normalize-space()=&apos;Relationships&apos;]]
+Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at base.BasePage.click(BasePage.java:33)
+	at pages.CustRegHomepage.navigateToRelationshipMasterTab(CustRegHomepage.java:171)
+	at tests.CusRegTest.verifyRelationshipDetails(CusRegTest.java:361)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.CusRegTest#verifyRelationshipDocument</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()=&apos;Document&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
+	at base.BasePage.click(BasePage.java:33)
+	at pages.CustRelationshipDocumentPage.clickDocumentTab(CustRelationshipDocumentPage.java:43)
+	at tests.CusRegTest.verifyRelationshipDocument(CusRegTest.java:451)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.CusRegTest#verifyRelationshipIdentity</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()=&apos;Identity&apos;] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
+	at base.BasePage.click(BasePage.java:33)
+	at pages.CustRelationshipIdentityPage.clickIdentityTab(CustRelationshipIdentityPage.java:46)
+	at tests.CusRegTest.verifyRelationshipIdentity(CusRegTest.java:397)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.CusRegTest#verifyAddressDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.CusRegTest#verifyCashFlowDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">tests.CusRegTest#verifyCommunicationDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">tests.CusRegTest#verifyCustomerRegistration</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">tests.CusRegTest#verifyDocumentDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">tests.CusRegTest#verifyExposureDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">tests.CusRegTest#verifyHighProfileDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">tests.CusRegTest#verifyIdentityDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">tests.CusRegTest#verifyTransactionDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

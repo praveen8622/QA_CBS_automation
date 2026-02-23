@@ -121,12 +121,12 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		// reg.enterCustomerName("Prakash", "Bahadur", "Karki");
 		// reg.enterCustomerNameLocal("प्रकाश", "बाहादुर", "कारकि");
-		// reg.enterMaidenName("Karki");
+		reg.enterMaidenName("Karki");
 		Thread.sleep(1000);
 		reg.selectBirthDate("1995", "March", "29");
 		Thread.sleep(1000);
-		reg.enterBirthCountry("india");
-		reg.enterBirthAddressIfApplicable("india");
+		reg.enterBirthCountry("Nepal");
+		reg.enterBirthAddressIfApplicable("Nepal");
 		reg.selectIsForeign(false, "India");
 		reg.selectIsPEP(false, "Domestic pep");
 		reg.selectGender("male");
@@ -151,13 +151,15 @@ public class CusRegTest extends BaseTestSequential {
 
 		identityPage.openAddIdentityForm();
 		Thread.sleep(1000);
-		identityPage.selectIdentityTypeAndFillConditionalField("Driver’s License",
-				"Bagmati Province");
+		identityPage.selectIdentityTypeAndFillConditionalField("Citizenship", "Kathmandu");
 		identityPage.enterIdentityNumber(DataGenerator.generateRandomLicense());
 		Thread.sleep(1000);
 		identityPage.selectIssueDate("2020", "March", "29");
 		Thread.sleep(1000);
 		identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
+		Thread.sleep(1000);
+		identityPage.uploadIdentityDocument(
+				"C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\testdoc.jpg");
 		Thread.sleep(1000);
 		identityPage.clickSaveIdentity();
 		Thread.sleep(1000);
@@ -198,6 +200,9 @@ public class CusRegTest extends BaseTestSequential {
 		documentPage.selectDocumentType("Passport");
 		documentPage.enterDocumentTitle("Passport");
 		documentPage.enterDocumentNumber(DataGenerator.generateRandomPassport());
+		Thread.sleep(1000);
+		documentPage.uploadDocument(
+				"C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\testdoc.jpg");
 		documentPage.clickSave();
 		Thread.sleep(1000);
 	}
@@ -230,8 +235,9 @@ public class CusRegTest extends BaseTestSequential {
 		addressPage.enterLatitude("123");
 		Thread.sleep(1000);
 		addressPage.enterLongitude("123");
-		// Thread.sleep(1000);
-		// addressPage.uploadAddressDocument("");
+		Thread.sleep(1000);
+		addressPage.uploadAddressDocument(
+				"C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\testdoc.jpg");
 		Thread.sleep(1000);
 		addressPage.clickSave();
 		Thread.sleep(1000);
@@ -322,8 +328,7 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		exposurePage.clickAdd();
 		Thread.sleep(1000);
-		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans",
-				"500000", "12", "60");
+		exposurePage.enterExposureDetails("Banking", "Global IME Bank", "Loans", "500000", "12", "60");
 		Thread.sleep(1000);
 		exposurePage.clickSave();
 		Thread.sleep(1000);
@@ -339,8 +344,7 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		employmentPage.clickAdd();
 		Thread.sleep(1000);
-		employmentPage.enterEmploymentDetails("Salaried", "Engineer", "Manager",
-				"Tech Corp", "Kathmandu", "1200000");
+		employmentPage.enterEmploymentDetails("Salaried", "Engineer", "Manager", "Tech Corp", "Kathmandu", "1200000");
 		Thread.sleep(1000);
 		employmentPage.clickSave();
 		Thread.sleep(1000);
@@ -401,9 +405,9 @@ public class CusRegTest extends BaseTestSequential {
 		relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January",
 				"1");
 		Thread.sleep(1000);
-		// relationshipIdentityPage.uploadDocument("C:\\path\\to\\doc.jpg"); // Skip
-		// upload for now as it needs a real file
-
+		relationshipIdentityPage.uploadDocument(
+				"C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\testdoc.jpg");
+		Thread.sleep(1000);
 		relationshipIdentityPage.clickSave();
 		Thread.sleep(2000);
 		relationshipIdentityPage.clickNext();
@@ -454,7 +458,9 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		relationshipDocumentPage.selectMimeType("image/png");
 		Thread.sleep(1000);
-		// relationshipDocumentPage.uploadDocument("C:\\path\\to\\doc.png");
+		relationshipDocumentPage.uploadDocument(
+				"C:\\Users\\Praveen_Vortex\\eclipse-workspace\\KYC_Cus_Reg\\src\\test\\resources\\testimages\\testdoc.jpg");
+		Thread.sleep(1000);
 
 		relationshipDocumentPage.clickSave();
 		Thread.sleep(2000);
