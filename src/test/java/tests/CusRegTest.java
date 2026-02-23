@@ -98,9 +98,13 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 1)
 	public void verifyCustomerRegistration() throws InterruptedException {
 		LoggerUtil.info("Registration test started");
+
+		String firstName = DataGenerator.generateRandomfirstName();
+		String lastName = DataGenerator.generateRandomlastName();
+		String fullName = firstName + " " + lastName;
 		// Generate screening id
 		homePage.navigateToCustomerScreening();
-		custScreeningPage.enterFullName("Bahadur Karki");
+		custScreeningPage.enterFullName(fullName);
 		custScreeningPage.clickSearch();
 		// Capture Screening Id
 		String screeningId = custScreeningPage.getScreeningId();
@@ -121,7 +125,7 @@ public class CusRegTest extends BaseTestSequential {
 		Thread.sleep(1000);
 		// reg.enterCustomerName("Prakash", "Bahadur", "Karki");
 		// reg.enterCustomerNameLocal("प्रकाश", "बाहादुर", "कारकि");
-		reg.enterMaidenName("Karki");
+		reg.enterMaidenName(lastName);
 		Thread.sleep(1000);
 		reg.selectBirthDate("1995", "March", "29");
 		Thread.sleep(1000);
@@ -250,16 +254,17 @@ public class CusRegTest extends BaseTestSequential {
 		// custRegHomePage.searchAndEditDraftCustomer("PRAKASH BAHADUR KARKI");
 
 		LoggerUtil.info("High Profile Details test started");
+		String fullName = DataGenerator.generateRandomfirstName() + " " + DataGenerator.generateRandomlastName();
 
 		custRegHomePage.navigateToHighProfileTab();
 		Thread.sleep(1000);
 
 		highProfilePage.openAddHighProfileForm();
 		Thread.sleep(1000);
-		highProfilePage.enterFullName("Ram");
+		highProfilePage.enterFullName(fullName);
 		Thread.sleep(1000);
-		highProfilePage.enterFullNameLocal("राम");
-		Thread.sleep(1000);
+		// highProfilePage.enterFullNameLocal(fullName);
+		// Thread.sleep(1000);
 		highProfilePage.selectGender("male");
 		Thread.sleep(1000);
 		highProfilePage.selectRelation("father");

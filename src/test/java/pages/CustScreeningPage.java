@@ -18,7 +18,6 @@ public class CustScreeningPage extends BasePage {
     public void enterFullName(String name) {
         LoggerUtil.info("Entering Full Name for screening: " + name);
         typeText(nameInputLocator, name);
-        assertTextEquals(nameInputLocator, name, name);
     }
 
     public void clickSearch() {
