@@ -30,38 +30,52 @@ public class BasePage {
 	// Basic Actions
 	// ================================
 	protected void click(By locator) {
-		wait.waitForElementToBeClickable(locator).click();
+		try {
+			WebElement element = wait.waitForElementToBeClickable(locator);
+			element.click();
+		} catch (Exception e) {
+			handleActionException("click", locator, e);
+		}
 	}
 
 	protected void typeText(By locator, String text) {
-		WebElement element = wait.waitForElementToBeClickable(locator);
-		element.click();
-		element.clear();
-		element.sendKeys(text);
+		try {
+			WebElement element = wait.waitForElementToBeVisible(locator);
+			element.click();
+			element.clear();
+			element.sendKeys(text);
+		} catch (Exception e) {
+			handleActionException("typeText", locator, e);
+		}
 	}
 
 	protected void selectFromDropdown(By locator, String value) {
 		if (value == null || value.trim().isEmpty())
 			return;
-		WebElement element = wait.waitForElementToBeClickable(locator);
-		element.click();
-		element.sendKeys(value);
-		element.sendKeys(Keys.ENTER);
+		try {
+			WebElement element = wait.waitForElementToBeClickable(locator);
+			element.click();
+			element.sendKeys(value);
+			element.sendKeys(Keys.ENTER);
+		} catch (Exception e) {
+			handleActionException("selectFromDropdown", locator, e);
+		}
 	}
 
 	// ================================
 	// React-Select handler (STABLE)
 	// ================================
-	protected void selectFromReactSelect(By containerLocator,
-			By inputLocator,
-			String value) {
+	protected void selectFromReactSelect(By containerLocator, By inputLocator, String value) {
+		try {
+			WebElement container = wait.waitForElementToBeClickable(containerLocator);
+			container.click();
 
-		WebElement container = wait.waitForElementToBeClickable(containerLocator);
-		container.click();
-
-		WebElement input = wait.waitForElementToBeVisible(inputLocator);
-		input.sendKeys(value);
-		input.sendKeys(Keys.ENTER);
+			WebElement input = wait.waitForElementToBeVisible(inputLocator);
+			input.sendKeys(value);
+			input.sendKeys(Keys.ENTER);
+		} catch (Exception e) {
+			handleActionException("selectFromReactSelect", containerLocator, e);
+		}
 	}
 
 	protected void selectFromGenderDropdown(By locator, String value) {
@@ -104,15 +118,18 @@ public class BasePage {
 	// Checkbox handling
 	// ================================
 	protected void setCheckbox(By locator, boolean shouldBeChecked) {
-		WebElement element = wait.waitForElementToBePresent(locator);
-
-		if (element.isSelected() != shouldBeChecked) {
-			try {
-				element.click();
-			} catch (Exception e) {
-				LoggerUtil.info("Regular click failed, trying JS click for checkbox");
-				clickUsingJS(element);
+		try {
+			WebElement element = wait.waitForElementToBePresent(locator);
+			if (element.isSelected() != shouldBeChecked) {
+				try {
+					element.click();
+				} catch (Exception e) {
+					LoggerUtil.info("Regular click failed, trying JS click for checkbox");
+					clickUsingJS(element);
+				}
 			}
+		} catch (Exception e) {
+			handleActionException("setCheckbox", locator, e);
 		}
 	}
 
@@ -185,10 +202,27 @@ public class BasePage {
 	// File Upload
 	// ================================
 	protected void uploadFile(By locator, String filePath) {
-		WebElement element = wait.waitForElementToBePresent(locator);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].removeAttribute('style');", element);
-		element.sendKeys(filePath);
+		try {
+			WebElement element = wait.waitForElementToBePresent(locator);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].removeAttribute('style');", element);
+			element.sendKeys(filePath);
+		} catch (Exception e) {
+			handleActionException("uploadFile", locator, e);
+		}
+	}
+
+	// ================================
+	// Exception Handling Helper
+	// ================================
+	private void handleActionException(String action, By locator, Exception e) {
+		String msg = String.format("Action '%s' failed for element: %s | Error: %s", action, locator, e.getMessage());
+		LoggerUtil.error(msg);
+		if (softAssert != null) {
+			softAssert.fail(msg);
+		} else {
+			throw new RuntimeException(msg, e);
+		}
 	}
 
 	// ================================
