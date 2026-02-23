@@ -24,8 +24,8 @@ public class HomePage extends BasePage {
     // Navigation Methods
     // =================================================
     public void navigateToCustomerRegistration() {
-        LoggerUtil.info("Clicking 'Customer Management' menu");
-        click(navCustregLocator);
+        // LoggerUtil.info("Clicking 'Customer Management' menu");
+        // click(navCustregLocator);
 
         LoggerUtil.info("Clicking 'Customer Registration' submenu");
         click(custRegLocator);
