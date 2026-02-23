@@ -9,6 +9,7 @@ pages\CustCashFlowPage.class
 base\BasePage.class
 base\BaseTest.class
 pages\CustDocument.class
+workflows\KycWorkflow.class
 pages\CustHighProfilePage.class
 pages\CustExposurePage.class
 pages\CustRelationshipPage.class
@@ -25,5 +26,6 @@ pages\CustIdentityPage.class
 tests\NewTest.class
 utilities\ConfigReader.class
 pages\CustAddressPage.class
+pages\CustRelationshipPhoto.class
 helper\LoginHelper.class
 pages\CustRelationshipCommunication.class

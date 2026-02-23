@@ -10,9 +10,6 @@ public class DataGenerator {
     private static final Random RANDOM = new Random();
     private static final Faker faker = new Faker();
 
-    // String name = faker.name().fullName();
-    // System.out.println("Full Name: " + name);
-
     /**
      * Generates a random numeric string of specified length.
      */

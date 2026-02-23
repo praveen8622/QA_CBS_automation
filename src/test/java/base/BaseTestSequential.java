@@ -38,6 +38,7 @@ public class BaseTestSequential {
     }
 
     @BeforeMethod
+
     public void initSoftAssert() {
         softAssert = new SoftAssert();
     }

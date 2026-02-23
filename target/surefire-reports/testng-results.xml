@@ -1,617 +1,277 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="15" passed="9" failed="6" skipped="0">
+<testng-results ignored="0" total="16" passed="16" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-22T17:42:57 NPT" name="Suite" finished-at="2026-02-22T17:45:09 NPT" duration-ms="131675">
+  <suite started-at="2026-02-23T15:41:48 NPT" name="Suite" finished-at="2026-02-23T15:45:01 NPT" duration-ms="193571">
     <groups>
     </groups>
-    <test started-at="2026-02-22T17:42:57 NPT" name="Chrome Test" finished-at="2026-02-22T17:45:09 NPT" duration-ms="131675">
+    <test started-at="2026-02-23T15:41:48 NPT" name="Chrome Test" finished-at="2026-02-23T15:45:01 NPT" duration-ms="193571">
       <class name="tests.CusRegTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:42:57 NPT" name="setUp" finished-at="2026-02-22T17:43:13 NPT" duration-ms="16200" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:41:48 NPT" name="setUp" finished-at="2026-02-23T15:42:04 NPT" duration-ms="16267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:13 NPT" name="pageSetup" finished-at="2026-02-22T17:43:13 NPT" duration-ms="38" status="PASS">
+        <test-method is-config="true" signature="pageSetup()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:04 NPT" name="pageSetup" finished-at="2026-02-23T15:42:04 NPT" duration-ms="35" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pageSetup -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:14 NPT" name="initSoftAssert" finished-at="2026-02-22T17:43:14 NPT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:04 NPT" name="initSoftAssert" finished-at="2026-02-23T15:42:04 NPT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:14 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:43:14 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:04 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:42:04 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:14 NPT" name="verifyCustomerRegistration" finished-at="2026-02-22T17:43:27 NPT" duration-ms="13530" status="PASS">
+        <test-method signature="verifyCustomerRegistration()[pri:1, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:04 NPT" name="verifyCustomerRegistration" description="Verify Customer Registration" finished-at="2026-02-23T15:42:18 NPT" duration-ms="14233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCustomerRegistration -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:27 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:43:27 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:18 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:42:18 NPT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:27 NPT" name="initSoftAssert" finished-at="2026-02-22T17:43:27 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:27 NPT" name="verifyIdentityDetails" finished-at="2026-02-22T17:43:38 NPT" duration-ms="10675" status="PASS">
+        <test-method signature="verifyIdentityDetails()[pri:2, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:18 NPT" name="verifyIdentityDetails" description="Verify Identity Details" finished-at="2026-02-23T15:42:30 NPT" duration-ms="11506" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIdentityDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:27 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:43:27 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:18 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:42:18 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:38 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:43:38 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:38 NPT" name="initSoftAssert" finished-at="2026-02-22T17:43:38 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:18 NPT" name="initSoftAssert" finished-at="2026-02-23T15:42:18 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:38 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:43:38 NPT" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:30 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:42:30 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:38 NPT" name="verifyCommunicationDetails" finished-at="2026-02-22T17:43:46 NPT" duration-ms="8674" status="PASS">
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method signature="verifyCommunicationDetails()[pri:3, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:30 NPT" name="verifyCommunicationDetails" description="Verify Communication Details" finished-at="2026-02-23T15:42:38 NPT" duration-ms="8530" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCommunicationDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:46 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:43:46 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:46 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:43:46 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:30 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:42:30 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:46 NPT" name="initSoftAssert" finished-at="2026-02-22T17:43:46 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:30 NPT" name="initSoftAssert" finished-at="2026-02-23T15:42:30 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:46 NPT" name="verifyDocumentDetails" finished-at="2026-02-22T17:43:50 NPT" duration-ms="3224" status="PASS">
+        <test-method signature="verifyDocumentDetails()[pri:4, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:38 NPT" name="verifyDocumentDetails" description="Verify Document Details" finished-at="2026-02-23T15:42:41 NPT" duration-ms="3339" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDocumentDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:50 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:43:50 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:38 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:42:38 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:38 NPT" name="initSoftAssert" finished-at="2026-02-23T15:42:38 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:38 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:42:38 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:50 NPT" name="verifyAddressDetails" finished-at="2026-02-22T17:44:08 NPT" duration-ms="18155" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:41 NPT" name="initSoftAssert" finished-at="2026-02-23T15:42:41 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:41 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:42:41 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method signature="verifyAddressDetails()[pri:5, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:42 NPT" name="verifyAddressDetails" description="Verify Address Details" finished-at="2026-02-23T15:42:59 NPT" duration-ms="17583" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddressDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:50 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:43:50 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:42 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:42:42 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:43:50 NPT" name="initSoftAssert" finished-at="2026-02-22T17:43:50 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:08 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:08 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:59 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:42:59 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:08 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:08 NPT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:59 NPT" name="initSoftAssert" finished-at="2026-02-23T15:42:59 NPT" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:08 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:08 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:08 NPT" name="verifyHighProfileDetails" finished-at="2026-02-22T17:44:27 NPT" duration-ms="19663" status="PASS">
+        <test-method signature="verifyHighProfileDetails()[pri:6, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:59 NPT" name="verifyHighProfileDetails" description="Verify High Profile Details" finished-at="2026-02-23T15:43:18 NPT" duration-ms="18972" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHighProfileDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:27 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:27 NPT" duration-ms="3" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:27 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:27 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:27 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:27 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:42:59 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:42:59 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:27 NPT" name="verifyTransactionDetails" finished-at="2026-02-22T17:44:32 NPT" duration-ms="4322" status="PASS">
+        <test-method signature="verifyTransactionDetails()[pri:7, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:18 NPT" name="verifyTransactionDetails" description="Verify Transaction Details" finished-at="2026-02-23T15:43:21 NPT" duration-ms="3124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTransactionDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:32 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:32 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:32 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:32 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:32 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:32 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:18 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:43:18 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:32 NPT" name="verifyCashFlowDetails" finished-at="2026-02-22T17:44:38 NPT" duration-ms="6098" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:18 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:43:18 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:18 NPT" name="initSoftAssert" finished-at="2026-02-23T15:43:18 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method signature="verifyCashFlowDetails()[pri:8, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:21 NPT" name="verifyCashFlowDetails" description="Verify Cash Flow Details" finished-at="2026-02-23T15:43:26 NPT" duration-ms="5185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCashFlowDetails -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:38 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:38 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:21 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:43:21 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:38 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:38 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:21 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:43:21 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:21 NPT" name="initSoftAssert" finished-at="2026-02-23T15:43:21 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:38 NPT" name="verifyExposureDetails" finished-at="2026-02-22T17:44:45 NPT" duration-ms="7469" status="PASS">
+        <test-method signature="verifyExposureDetails()[pri:9, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:26 NPT" name="verifyExposureDetails" description="Verify Exposure Details" finished-at="2026-02-23T15:43:32 NPT" duration-ms="5865" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyExposureDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:38 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:38 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:45 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:45 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:26 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:43:26 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:45 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:45 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:26 NPT" name="initSoftAssert" finished-at="2026-02-23T15:43:26 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyEmploymentDetails()[pri:10, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:45 NPT" name="verifyEmploymentDetails" finished-at="2026-02-22T17:44:46 NPT" duration-ms="1037" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[Element <p class="text-start font-normal text-sm leading-150 shrink grow text-inherit"> is not clickable at point (168,532) because another element <div class="flex min-h-full h-full text-center items-center justify-center"> obscures it
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [68b9b6a8-9a91-4209-bd80-d256214ae759, clickElement {id=21481cb4-5670-4881-8b84-40a82f030ea0}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (68b9b6a8-9a91-4209-bd80-d256214ae759)] -> xpath: //p[normalize-space()='Employment Details']]
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <p class="text-start font-normal text-sm leading-150 shrink grow text-inherit"> is not clickable at point (168,532) because another element <div class="flex min-h-full h-full text-center items-center justify-center"> obscures it
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [68b9b6a8-9a91-4209-bd80-d256214ae759, clickElement {id=21481cb4-5670-4881-8b84-40a82f030ea0}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (68b9b6a8-9a91-4209-bd80-d256214ae759)] -> xpath: //p[normalize-space()='Employment Details']]
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BasePage.click(BasePage.java:33)
-at pages.CustRegHomepage.navigateToEmploymentTab(CustRegHomepage.java:165)
-at tests.CusRegTest.verifyEmploymentDetails(CusRegTest.java:344)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:26 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:43:26 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyEmploymentDetails()[pri:10, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:32 NPT" name="verifyEmploymentDetails" description="Verify Employment Details" finished-at="2026-02-23T15:43:38 NPT" duration-ms="5878" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyEmploymentDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:45 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:45 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:46 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:46 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:32 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:43:32 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:46 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:46 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:32 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:43:32 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:32 NPT" name="initSoftAssert" finished-at="2026-02-23T15:43:32 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipDetails()[pri:11, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:46 NPT" name="verifyRelationshipDetails" finished-at="2026-02-22T17:44:47 NPT" duration-ms="1032" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[Element <div class="flex items-center flex-row justify-start flex-nowrap"> is not clickable at point (179,572) because another element <div class="flex min-h-full h-full text-center items-center justify-center"> obscures it
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [68b9b6a8-9a91-4209-bd80-d256214ae759, clickElement {id=468e2ab3-289a-4ff6-9ae8-d53494f017f6}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (68b9b6a8-9a91-4209-bd80-d256214ae759)] -> xpath: //div[normalize-space()='Relationships']]
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: Element <div class="flex items-center flex-row justify-start flex-nowrap"> is not clickable at point (179,572) because another element <div class="flex min-h-full h-full text-center items-center justify-center"> obscures it
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [68b9b6a8-9a91-4209-bd80-d256214ae759, clickElement {id=468e2ab3-289a-4ff6-9ae8-d53494f017f6}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Element: [[FirefoxDriver: firefox on windows (68b9b6a8-9a91-4209-bd80-d256214ae759)] -> xpath: //div[normalize-space()='Relationships']]
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at base.BasePage.click(BasePage.java:33)
-at pages.CustRegHomepage.navigateToRelationshipMasterTab(CustRegHomepage.java:171)
-at tests.CusRegTest.verifyRelationshipDetails(CusRegTest.java:361)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:38 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:43:38 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method signature="verifyRelationshipDetails()[pri:11, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:38 NPT" name="verifyRelationshipDetails" description="Verify Relationship Master" finished-at="2026-02-23T15:43:57 NPT" duration-ms="19124" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipDetails -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:46 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:46 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:47 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:47 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:47 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:47 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:38 NPT" name="initSoftAssert" finished-at="2026-02-23T15:43:38 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:47 NPT" name="verifyRelationshipIdentity" finished-at="2026-02-22T17:44:53 NPT" duration-ms="5177" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Identity'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Identity'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
-at base.BasePage.click(BasePage.java:33)
-at pages.CustRelationshipIdentityPage.clickIdentityTab(CustRelationshipIdentityPage.java:46)
-at tests.CusRegTest.verifyRelationshipIdentity(CusRegTest.java:397)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:38 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:43:38 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:57 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:43:57 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method signature="verifyRelationshipIdentity()[pri:12, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:57 NPT" name="verifyRelationshipIdentity" description="Verify Relationship Identity" finished-at="2026-02-23T15:44:12 NPT" duration-ms="14685" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipIdentity -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:47 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:47 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:53 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:53 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:53 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:53 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:57 NPT" name="initSoftAssert" finished-at="2026-02-23T15:43:57 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:53 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:53 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:43:57 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:43:57 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method signature="verifyRelationshipCommunication()[pri:13, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:53 NPT" name="verifyRelationshipCommunication" finished-at="2026-02-22T17:44:58 NPT" duration-ms="5153" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Communication'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Communication'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
-at base.BasePage.click(BasePage.java:33)
-at pages.CustRelationshipCommunication.clickCommunicationTab(CustRelationshipCommunication.java:35)
-at tests.CusRegTest.verifyRelationshipCommunication(CusRegTest.java:428)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="verifyRelationshipCommunication()[pri:13, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:12 NPT" name="verifyRelationshipCommunication" description="Verify Relationship Communication" finished-at="2026-02-23T15:44:21 NPT" duration-ms="9217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipCommunication -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:58 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:44:58 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:12 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:44:12 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:58 NPT" name="initSoftAssert" finished-at="2026-02-22T17:44:58 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:12 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:44:12 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:12 NPT" name="initSoftAssert" finished-at="2026-02-23T15:44:12 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipDocument()[pri:14, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:58 NPT" name="verifyRelationshipDocument" finished-at="2026-02-22T17:45:03 NPT" duration-ms="5153" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Document'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Document'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
-at base.BasePage.click(BasePage.java:33)
-at pages.CustRelationshipDocumentPage.clickDocumentTab(CustRelationshipDocumentPage.java:43)
-at tests.CusRegTest.verifyRelationshipDocument(CusRegTest.java:451)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method signature="verifyRelationshipDocument()[pri:14, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:21 NPT" name="verifyRelationshipDocument" description="Verify Relationship Document" finished-at="2026-02-23T15:44:35 NPT" duration-ms="13392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRelationshipDocument -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:44:58 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:44:58 NPT" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:45:03 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:45:03 NPT" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:45:03 NPT" name="initSoftAssert" finished-at="2026-02-22T17:45:03 NPT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:21 NPT" name="initSoftAssert" finished-at="2026-02-23T15:44:21 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initSoftAssert -->
-        <test-method signature="verifyRelationshipAddress()[pri:15, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:45:03 NPT" name="verifyRelationshipAddress" finished-at="2026-02-22T17:45:08 NPT" duration-ms="5132" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Address'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Address'] (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 147.0.2, moz:accessibilityChecks: false, moz:buildID: 20260126151322, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 19148, moz:profile: C:\Users\PRAVEE~1\AppData\L..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 68b9b6a8-9a91-4209-bd80-d256214ae759
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utilities.WaitUtils.waitForElementToBeClickable(WaitUtils.java:18)
-at base.BasePage.click(BasePage.java:33)
-at pages.CustRelationshipAddressPage.clickAddressTab(CustRelationshipAddressPage.java:59)
-at tests.CusRegTest.verifyRelationshipAddress(CusRegTest.java:482)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:819)
-at org.testng.TestRunner.run(TestRunner.java:619)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
-at org.testng.TestNG.runSuites(TestNG.java:1134)
-at org.testng.TestNG.run(TestNG.java:1101)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRelationshipAddress -->
-        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:45:03 NPT" name="setupSoftAssert" finished-at="2026-02-22T17:45:03 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:21 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:44:21 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupSoftAssert -->
-        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:45:08 NPT" name="tearDownSoftAssert" finished-at="2026-02-22T17:45:08 NPT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:21 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:44:21 NPT" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownSoftAssert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@485e36bc]" started-at="2026-02-22T17:45:08 NPT" name="tearDown" finished-at="2026-02-22T17:45:09 NPT" duration-ms="790" status="PASS">
+        <test-method signature="verifyRelationshipAddress()[pri:15, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:35 NPT" name="verifyRelationshipAddress" description="Verify Relationship Address" finished-at="2026-02-23T15:44:54 NPT" duration-ms="19883" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRelationshipAddress -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:35 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:44:35 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:35 NPT" name="initSoftAssert" finished-at="2026-02-23T15:44:35 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:35 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:44:35 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method signature="verifyRelationshipPhoto()[pri:16, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:54 NPT" name="verifyRelationshipPhoto" description="Verify Relationship Photo" finished-at="2026-02-23T15:45:00 NPT" duration-ms="5466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRelationshipPhoto -->
+        <test-method is-config="true" signature="setupSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:54 NPT" name="setupSoftAssert" finished-at="2026-02-23T15:44:54 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSoftAssert -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:54 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:44:54 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method is-config="true" signature="initSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:44:54 NPT" name="initSoftAssert" finished-at="2026-02-23T15:44:54 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initSoftAssert -->
+        <test-method is-config="true" signature="tearDownSoftAssert()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:45:00 NPT" name="tearDownSoftAssert" finished-at="2026-02-23T15:45:00 NPT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSoftAssert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CusRegTest@2a79d4b1]" started-at="2026-02-23T15:45:00 NPT" name="tearDown" finished-at="2026-02-23T15:45:01 NPT" duration-ms="1197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
