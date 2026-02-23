@@ -12,11 +12,13 @@ public class CustRegisterPage extends BasePage {
 	// =================================================
 
 	private By formVisibleLocator = By.xpath("//label[@class='text-sm mb-1 block text-gray-600']");
+	private By individualCustomerHeaderLocator = By.xpath("//h4[normalize-space()='Individual Customer']");
 
 	// =================================================
 	// Personal Details Locators
 	// =================================================
 	private By legalStatusLocator = By.cssSelector("input[role='combobox']");
+	private By ScreeningIdLocator = By.xpath("//input[@name='screeningId']");
 	private By fNameLocator = By.cssSelector("input[aria-label='First Name']");
 	private By mNameLocator = By.cssSelector("input[aria-label='Middle Name']");
 	private By lNameLocator = By.cssSelector("input[aria-label='Last Name']");
@@ -29,6 +31,7 @@ public class CustRegisterPage extends BasePage {
 	private By foreignResidentLocator = By.xpath("//input[@aria-label='Foreign Residential Country']");
 	private By pepLocator = By.xpath("//input[@aria-label='PEP Category']");
 	private By genderLocator = By.xpath("//input[@aria-label='Gender']");
+	private By onboardingChannelLocator = By.xpath("//input[@aria-label='Onboarding Channel']");
 	private By maritalStatusLocator = By.xpath("//input[@aria-label='Marital Status']");
 	private By religionLocator = By.xpath("//input[@aria-label='Religion']");
 	private By educationLocator = By.xpath("//input[@aria-label='Education']");
@@ -50,7 +53,6 @@ public class CustRegisterPage extends BasePage {
 	private By isEmployeeYesLocator = By.xpath("//input[@name='isHomeEmployee' and @value='true']");
 	private By isEmployeeNoLocator = By.xpath("//input[@name='isHomeEmployee' and @value='false']");
 	private By nextBtnLocator = By.xpath("//div[normalize-space()='Proceed']");
-	private By custIdentityLocator = By.xpath("//p[normalize-space()='Customer Identity']");
 
 	// =================================================
 	// Constructor
@@ -78,12 +80,23 @@ public class CustRegisterPage extends BasePage {
 		}
 	}
 
+	public void enterScreeningId(String screeningIdValue) {
+		LoggerUtil.info("Entering Screening ID: " + screeningIdValue);
+		typeText(ScreeningIdLocator, screeningIdValue);
+		assertValueEquals(ScreeningIdLocator, screeningIdValue, "Screening ID not entered correctly");
+	}
+
 	// =================================================
 	// Personal Details Methods
 	// =================================================
 	public void chooseLegalStatus(String legalStatusValue) {
 		LoggerUtil.info("Selecting '" + legalStatusValue + "' from Legal Status dropdown");
 		selectFromDropdown(legalStatusLocator, legalStatusValue);
+
+		if (legalStatusValue.equalsIgnoreCase("Individual")) {
+			assertTextEquals(individualCustomerHeaderLocator, "Individual Customer",
+					"Individual Customer form not opened.");
+		}
 	}
 
 	public void enterCustomerName(String firstNameValue, String middleNameValue, String lastNameValue) {
@@ -149,6 +162,11 @@ public class CustRegisterPage extends BasePage {
 		selectFromGenderDropdown(genderLocator, genderValue);
 	}
 
+	public void selectOnboardingChannel(String onboardingChannelValue) {
+		LoggerUtil.info("Selecting '" + onboardingChannelValue + "' from Onboarding Channel dropdown");
+		selectFromDropdown(onboardingChannelLocator, onboardingChannelValue);
+	}
+
 	public void selectMaritalStatus(String maritalStatusValue) {
 		LoggerUtil.info("Selecting '" + maritalStatusValue + "' from Marital Status dropdown");
 		selectFromDropdown(maritalStatusLocator, maritalStatusValue);
@@ -208,11 +226,7 @@ public class CustRegisterPage extends BasePage {
 	public void clickNextButton() {
 		LoggerUtil.info("Clicking 'Next' button");
 		click(nextBtnLocator);
-	}
 
-	public void openIdentityformPage() {
-		LoggerUtil.info("Clicking 'Customer Identity' step");
-		click(custIdentityLocator);
 	}
 
 	// =================================================

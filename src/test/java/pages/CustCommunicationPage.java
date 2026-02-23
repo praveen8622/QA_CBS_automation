@@ -44,17 +44,6 @@ public class CustCommunicationPage extends BasePage {
         click(addCommunicationLocator);
     }
 
-    // public void selectDeviceType(String deviceType) {
-    // LoggerUtil.info("Selecting Device Type: " + deviceType);
-    // selectFromReactSelect(
-    // deviceTypeContainerLocator,
-    // deviceTypeLocator,
-    // deviceType
-    // );
-    // assertValueEquals(deviceTypeLocator, deviceType,
-    // "Device Type value mismatch");
-    // }
-
     public void selectIsPersonalDevice(String value) {
         LoggerUtil.info("Selecting '" + value + "' from 'Is Personal Device' dropdown");
         selectFromReactSelect(

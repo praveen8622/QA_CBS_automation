@@ -10,7 +10,6 @@ public class CustCashFlowPage extends BasePage {
     // =================================================
     // Locators
     // =================================================
-    private By cashFlowTabLocator = By.xpath("//p[normalize-space()='Cash Flow']");
     private By addBtnLocator = By.xpath("//button[@title='Add']");
 
     private By headingNameContainerLocator = By
@@ -33,10 +32,6 @@ public class CustCashFlowPage extends BasePage {
     // =================================================
     // Actions
     // =================================================
-    public void navigateToCashFlowTab() {
-        LoggerUtil.info("Navigating to Cash Flow tab");
-        click(cashFlowTabLocator);
-    }
 
     public void clickAdd() {
         LoggerUtil.info("Clicking 'Add' button for Cash Flow");
@@ -50,6 +45,7 @@ public class CustCashFlowPage extends BasePage {
         selectFromReactSelect(headingNameContainerLocator, headingNameInputLocator, heading);
         selectFromReactSelect(frequencyContainerLocator, frequencyInputLocator, frequency);
         typeText(amountInputLocator, amount);
+        assertValueEquals(amountInputLocator, amount, "Amount mismatch in Cash Flow");
     }
 
     public void clickSave() {

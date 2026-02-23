@@ -19,6 +19,8 @@ public class CustIdentityPage extends BasePage {
 	private By identityNumberInputLocator = By.xpath("//input[@name='identityNo']");
 
 	private By openIssueOfficeNameInputLocator = By.xpath("//input[@name='openIssueOfficeName']");
+	private By localBodyInputLocator = By.xpath("//input[@aria-label='local Body']");
+	private By stateInputLocator = By.xpath("//input[@aria-label='State']");
 
 	private By issueDateButtonLocator = By.name("issueDate");
 	private By issueDateLocalInputLocator = By.xpath("//input[@name='issueDateLocal']");
@@ -29,7 +31,7 @@ public class CustIdentityPage extends BasePage {
 
 	private By expiryDateInputLocator = By.name("expiryDate");
 
-	private By documentUploadInputLocator = By.xpath("//input[@type='file']");
+	private By documentUploadInputLocator = By.xpath("//div[contains(@class,'dropzone')]//input[@type='file']");
 
 	private By exitButtonLocator = By.xpath("//button[.//text()[normalize-space()='Exit']]");
 
@@ -58,6 +60,24 @@ public class CustIdentityPage extends BasePage {
 	public void selectIdentityType(String identityTypeValue) {
 		LoggerUtil.info("Selecting '" + identityTypeValue + "' from Identity Type dropdown");
 		selectFromDropdown(identityTypeDropdownLocator, identityTypeValue);
+	}
+
+	public void selectLocalBody(String localBody) {
+		LoggerUtil.info("Selecting Local Body: " + localBody);
+		selectFromDropdown(localBodyInputLocator, localBody);
+	}
+
+	public void selectState(String state) {
+		LoggerUtil.info("Selecting State: " + state);
+		selectFromDropdown(stateInputLocator, state);
+	}
+
+	public void selectIdentityTypeAndFillConditionalField(String type, String fieldValue) {
+		selectIdentityType(type);
+		fillConditionalIdentityField(type, fieldValue,
+				openIssueOfficeNameInputLocator,
+				localBodyInputLocator,
+				stateInputLocator);
 	}
 
 	public void enterIdentityNumber(String identityNumberValue) {
@@ -148,7 +168,6 @@ public class CustIdentityPage extends BasePage {
 			assertFalseCondition(
 					getAttributeValue(expiryDateInputLocator, "value").isEmpty(),
 					"Expiry Date was not populated");
-
 		} else {
 			LoggerUtil.info("Identity is NOT expiry-based. Skipping Expiry Date selection.");
 
@@ -164,7 +183,7 @@ public class CustIdentityPage extends BasePage {
 
 	public void uploadIdentityDocument(String filePath) {
 		LoggerUtil.info("Uploading Identity Document from path: " + filePath);
-		typeText(documentUploadInputLocator, filePath);
+		uploadFile(documentUploadInputLocator, filePath);
 	}
 
 	// =================================================

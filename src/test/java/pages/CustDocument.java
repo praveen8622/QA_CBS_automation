@@ -13,18 +13,43 @@ public class CustDocument extends BasePage {
 
 	}
 
-	// private By documentTypeDropdownLocator =
-	// By.xpath("//input[@aria-label='Document Type']");
-	// private By documentTitleLocator = By.xpath("//input[@name='documentTitle']");
-	// private By documentNumLocator = By.xpath("//input[@name='documentNo']");
-	// private By addBtnLocator = By.xpath("//input[@name='documentNo']");
-	// private By exitBtnLocator = By.xpath("//input[@name='documentNo']");
-	// private By resetBtnLocator = By.xpath("//input[@name='documentNo']");
-	private By nextButtonLocator = By.xpath("//button[@title='Next Step']");
+	private By addDocumentBtnLocator = By.xpath("//button[@title='Add']");
+	private By documentTypeInputLocator = By.xpath("//input[@aria-label='Document Type']");
+	private By documentTitleInputLocator = By.name("documentTitle");
+	private By documentNoInputLocator = By.name("documentNo");
+	private By fileUploadInputLocator = By.xpath("//input[@type='file']");
+	private By saveButtonLocator = By.xpath("//button[normalize-space()='Save']");
 
-	public void clickNext() {
+	public void clickAddDocument() {
+		LoggerUtil.info("Clicking Add Document button");
+		click(addDocumentBtnLocator);
+	}
+
+	public void selectDocumentType(String type) {
+		LoggerUtil.info("Selecting Document Type: " + type);
+		selectFromDropdown(documentTypeInputLocator, type);
+	}
+
+	public void enterDocumentTitle(String title) {
+		LoggerUtil.info("Entering Document Title: " + title);
+		typeText(documentTitleInputLocator, title);
+		assertValueEquals(documentTitleInputLocator, title, "Document Title mismatch");
+	}
+
+	public void enterDocumentNumber(String number) {
+		LoggerUtil.info("Entering Document Number: " + number);
+		typeText(documentNoInputLocator, number);
+		assertValueEquals(documentNoInputLocator, number, "Document Number mismatch");
+	}
+
+	public void uploadDocument(String filePath) {
+		LoggerUtil.info("Uploading document: " + filePath);
+		uploadFile(fileUploadInputLocator, filePath);
+	}
+
+	public void clickSave() {
 		LoggerUtil.info("Clicking 'Next' button on Document page");
-		click(nextButtonLocator);
+		click(saveButtonLocator);
 	}
 
 }
