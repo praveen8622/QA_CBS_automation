@@ -31,7 +31,7 @@ public class DataGenerator {
             result.append(combined.charAt(RANDOM.nextInt(combined.length())));
         }
         return result.toString();
-    }
+    }                                                                                                                                            
 
     /**
      * Generates a random passport-like number (e.g., P + 8 digits).

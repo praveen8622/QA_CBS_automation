@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import pages.*;
 
-public class KycWorkflow {
+public class KycCustRegWorkflow {
     private WebDriver driver;
     private SoftAssert softAssert;
 
@@ -29,7 +29,7 @@ public class KycWorkflow {
     private CustScreeningPage custScreeningPage;
     private CustRelationshipPhoto relationshipPhotoPage;
 
-    public KycWorkflow(WebDriver driver, SoftAssert softAssert) {
+    public KycCustRegWorkflow(WebDriver driver, SoftAssert softAssert) {
         this.driver = driver;
         this.softAssert = softAssert;
         initializePages();
@@ -140,7 +140,7 @@ public class KycWorkflow {
         Thread.sleep(1000);
         identityPage.selectIssueDate("2020", "March", "29");
         Thread.sleep(1000);
-        identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
+        // identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
         Thread.sleep(1000);
         identityPage.uploadIdentityDocument(relativePath);
         Thread.sleep(1000);
@@ -327,7 +327,8 @@ public class KycWorkflow {
         Thread.sleep(1000);
         relationshipIdentityPage.selectIssueDate("2021", "January", "1");
         Thread.sleep(1000);
-        relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January", "1");
+        // relationshipIdentityPage.handleExpiryDateIfApplicable("2031", "January",
+        // "1");
         Thread.sleep(1000);
         relationshipIdentityPage.uploadDocument(relativePath);
         Thread.sleep(1000);

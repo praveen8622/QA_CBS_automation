@@ -7,18 +7,18 @@ import org.testng.annotations.Test;
 import base.BaseTestSequential;
 import utilities.DataGenerator;
 import utilities.LoggerUtil;
-import workflows.KycWorkflow;
+import workflows.KycCustRegWorkflow;
 
 public class CusRegTest extends BaseTestSequential {
 
-	private KycWorkflow kyc;
+	private KycCustRegWorkflow kyc;
 	private String testImagePath = "testimages/testdoc.jpg";
 	private String profileImagePath = "testimages/profile.jpg";
 
 	// private String editCustomerName = "PRAKASH BAHADUR KARKI";
 	@BeforeClass
 	public void pageSetup() {
-		kyc = new KycWorkflow(driver, softAssert);
+		kyc = new KycCustRegWorkflow(driver, softAssert);
 	}
 
 	@BeforeMethod
