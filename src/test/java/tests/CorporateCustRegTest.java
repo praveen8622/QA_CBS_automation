@@ -12,6 +12,7 @@ import workflows.CorporateCustRegWorkflow;
 public class CorporateCustRegTest extends BaseTestSequential {
 
     private CorporateCustRegWorkflow corpKyc;
+    private String testImagePath = "testimages/testdoc.jpg";
 
     @BeforeClass
     public void pageSetup() {
@@ -35,6 +36,13 @@ public class CorporateCustRegTest extends BaseTestSequential {
         // needed.
         corpKyc.fillPrimaryRegistration(companyName, "Company", registeredNumber, "Nepal Electricity");
 
+        softAssert.assertAll();
+    }
+
+    @Test(priority = 2, description = "Verify Identity Details")
+    public void verifyIdentityDetails() throws InterruptedException {
+        LoggerUtil.info("Identity Details test started");
+        corpKyc.fillIdentityDetails(DataGenerator.generateRandomLicense(), testImagePath);
         softAssert.assertAll();
     }
 }

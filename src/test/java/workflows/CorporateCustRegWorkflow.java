@@ -33,6 +33,7 @@ public class CorporateCustRegWorkflow {
         corpRegPage.setSoftAssert(softAssert);
         homePage.setSoftAssert(softAssert);
         custRegHomePage.setSoftAssert(softAssert);
+        identityPage.setSoftAssert(softAssert);
     }
 
     public void updateSoftAssert(SoftAssert newSoftAssert) {
