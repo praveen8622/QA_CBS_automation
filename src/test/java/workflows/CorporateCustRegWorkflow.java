@@ -4,45 +4,36 @@ import org.openqa.selenium.WebDriver;
 import org.testng.asserts.SoftAssert;
 import pages.*;
 
-public class CorporateCustRegWorkflow {
-    private WebDriver driver;
-    private SoftAssert softAssert;
+public class CorporateCustRegWorkflow extends BaseCustRegWorkflow {
 
-    // Pages
+    // Unique Pages for Corporate Registration
     private CorporateCustRegPage corpRegPage;
-    private CustRegHomepage custRegHomePage;
     private HomePage homePage;
-    private CustIdentityPage identityPage;
 
     public CorporateCustRegWorkflow(WebDriver driver, SoftAssert softAssert) {
-        this.driver = driver;
-        this.softAssert = softAssert;
+        super(driver, softAssert);
         initializePages();
     }
 
     private void initializePages() {
         corpRegPage = new CorporateCustRegPage(driver);
         homePage = new HomePage(driver);
-        custRegHomePage = new CustRegHomepage(driver);
-        identityPage = new CustIdentityPage(driver);
-
         syncSoftAssert();
     }
 
     private void syncSoftAssert() {
         corpRegPage.setSoftAssert(softAssert);
         homePage.setSoftAssert(softAssert);
-        custRegHomePage.setSoftAssert(softAssert);
-        identityPage.setSoftAssert(softAssert);
     }
 
+    @Override
     public void updateSoftAssert(SoftAssert newSoftAssert) {
-        this.softAssert = newSoftAssert;
+        super.updateSoftAssert(newSoftAssert);
         syncSoftAssert();
     }
 
     // ================================
-    // Business Flows
+    // Unique Business Flows
     // ================================
 
     public void fillPrimaryRegistration(String companyName, String authority, String registeredNumber, String obligor)
@@ -78,24 +69,5 @@ public class CorporateCustRegWorkflow {
         Thread.sleep(2000);
         corpRegPage.clickProceedButton();
         Thread.sleep(2000);
-    }
-
-    public void fillIdentityDetails(String licenseNumber, String relativePath) throws InterruptedException {
-        custRegHomePage.navigateToIdentityTab();
-        identityPage.openAddIdentityForm();
-        Thread.sleep(1000);
-        identityPage.selectIdentityTypeAndFillConditionalField("Citizenship", "Kathmandu");
-        identityPage.enterIdentityNumber(licenseNumber);
-        Thread.sleep(1000);
-        identityPage.selectIssueDate("2020", "March", "29");
-        Thread.sleep(1000);
-        // identityPage.handleExpiryDateIfApplicable("2030", "March", "30");
-        Thread.sleep(1000);
-        identityPage.uploadIdentityDocument(relativePath);
-        Thread.sleep(1000);
-        identityPage.clickSaveIdentity();
-        Thread.sleep(1000);
-        identityPage.clickNextbutton();
-        Thread.sleep(1000);
     }
 }

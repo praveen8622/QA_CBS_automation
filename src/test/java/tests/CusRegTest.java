@@ -14,6 +14,7 @@ public class CusRegTest extends BaseTestSequential {
 	private KycCustRegWorkflow kyc;
 	private String testImagePath = "testimages/testdoc.jpg";
 	private String profileImagePath = "testimages/profile.jpg";
+	private boolean isMemberCustomer = true;
 
 	// private String editCustomerName = "PRAKASH BAHADUR KARKI";
 	@BeforeClass
@@ -49,7 +50,7 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 3, description = "Verify Communication Details")
 	public void verifyCommunicationDetails() throws InterruptedException {
 		LoggerUtil.info("Communication Details test started");
-		kyc.fillCommunicationDetails("9841234567");
+		kyc.fillCommunicationDetails(DataGenerator.generateRandomPhoneNumber());
 		softAssert.assertAll();
 	}
 
@@ -106,12 +107,20 @@ public class CusRegTest extends BaseTestSequential {
 	@Test(priority = 11, description = "Verify Relationship Master")
 	public void verifyRelationshipDetails() throws InterruptedException {
 		LoggerUtil.info("Relationship Details test started");
-		kyc.fillRelationshipMasterDetails();
+
+		String firstName = DataGenerator.generateRandomfirstName();
+		String lastName = DataGenerator.generateRandomlastName();
+		kyc.fillIndividualRelationshipMaster(isMemberCustomer, "3604506", firstName, lastName);
 		softAssert.assertAll();
 	}
 
 	@Test(priority = 12, description = "Verify Relationship Identity")
 	public void verifyRelationshipIdentity() throws InterruptedException {
+		if (isMemberCustomer) {
+			LoggerUtil.info("Skipping Identity details, clicking Next");
+			kyc.skipRelationshipIdentityDetails();
+			return;
+		}
 		LoggerUtil.info("Relationship Identity Details test started");
 		// kyc.resumeDraft(editCustomerName);
 		kyc.fillRelationshipIdentityDetails(DataGenerator.generateRandomLicense(), testImagePath);
@@ -120,14 +129,24 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 13, description = "Verify Relationship Communication")
 	public void verifyRelationshipCommunication() throws InterruptedException {
+		if (isMemberCustomer) {
+			LoggerUtil.info("Skipping Communication details, clicking Next");
+			kyc.skipRelationshipCommunicationDetails();
+			return;
+		}
 		LoggerUtil.info("Relationship Communication Details test started");
 		// kyc.resumeDraft(editCustomerName);
-		kyc.fillRelationshipCommunicationDetails("9876543221");
+		kyc.fillRelationshipCommunicationDetails(DataGenerator.generateRandomPhoneNumber());
 		softAssert.assertAll();
 	}
 
 	@Test(priority = 14, description = "Verify Relationship Document")
 	public void verifyRelationshipDocument() throws InterruptedException {
+		if (isMemberCustomer) {
+			LoggerUtil.info("Skipping Document details, clicking Next");
+			kyc.skipRelationshipDocumentDetails();
+			return;
+		}
 		LoggerUtil.info("Relationship Document Details test started");
 		// kyc.resumeDraft(editCustomerName);
 		kyc.fillRelationshipDocumentDetails(DataGenerator.generateRandomNumber(10), testImagePath);
@@ -136,6 +155,11 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 15, description = "Verify Relationship Address")
 	public void verifyRelationshipAddress() throws InterruptedException {
+		if (isMemberCustomer) {
+			LoggerUtil.info("Skipping Address details, clicking Next");
+			kyc.skipRelationshipAddressDetails();
+			return;
+		}
 		LoggerUtil.info("Relationship Address Details test started");
 		// kyc.resumeDraft(editCustomerName);
 		kyc.fillRelationshipAddressDetails();
@@ -144,6 +168,11 @@ public class CusRegTest extends BaseTestSequential {
 
 	@Test(priority = 16, description = "Verify Relationship Photo")
 	public void verifyRelationshipPhoto() throws InterruptedException {
+		if (isMemberCustomer) {
+			LoggerUtil.info("Skipping Photo details, clicking Next");
+			kyc.skipRelationshipPhoto();
+			return;
+		}
 		LoggerUtil.info("Relationship Photo test started");
 		// kyc.resumeDraft(editCustomerName);
 		kyc.fillRelationshipPhoto(profileImagePath);
