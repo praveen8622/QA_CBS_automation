@@ -41,72 +41,72 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    // @Test(priority = 2, description = "Verify Identity Details")
-    // public void verifyIdentityDetails() throws InterruptedException {
-    // LoggerUtil.title("Identity Details test started");
-    // corpKyc.fillIdentityDetails(DataGenerator.generateRandomLicense(),
-    // testImagePath);
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 2, description = "Verify Identity Details")
+    public void verifyIdentityDetails() throws InterruptedException {
+        LoggerUtil.title("Identity Details test started");
+        corpKyc.fillIdentityDetails(DataGenerator.generateRandomLicense(),
+                testImagePath);
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 3, description = "Verify Communication Details")
-    // public void verifyCommunicationDetails() throws InterruptedException {
-    // LoggerUtil.title("Communication Details test started");
-    // corpKyc.fillCommunicationDetails(DataGenerator.generateRandomPhoneNumber());
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 3, description = "Verify Communication Details")
+    public void verifyCommunicationDetails() throws InterruptedException {
+        LoggerUtil.title("Communication Details test started");
+        corpKyc.fillCommunicationDetails(DataGenerator.generateRandomPhoneNumber());
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 4, description = "Verify Document Details")
-    // public void verifyDocumentDetails() throws InterruptedException {
-    // LoggerUtil.title("Document Details test started");
-    // corpKyc.fillDocumentDetails(DataGenerator.generateRandomPassport(),
-    // testImagePath);
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 4, description = "Verify Document Details")
+    public void verifyDocumentDetails() throws InterruptedException {
+        LoggerUtil.title("Document Details test started");
+        corpKyc.fillDocumentDetails(DataGenerator.generateRandomPassport(),
+                testImagePath);
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 5, description = "Verify Address Details")
-    // public void verifyAddressDetails() throws InterruptedException {
-    // LoggerUtil.title("Address Details test started");
-    // corpKyc.fillAddressDetails(testImagePath);
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 5, description = "Verify Address Details")
+    public void verifyAddressDetails() throws InterruptedException {
+        LoggerUtil.title("Address Details test started");
+        corpKyc.fillAddressDetails(testImagePath);
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 6, description = "Verify High Profile Details")
-    // public void verifyHighProfileDetails() throws InterruptedException {
-    // LoggerUtil.title("High Profile Details test started");
-    // String fullName = DataGenerator.generateRandomfirstName() + " " +
-    // DataGenerator.generateRandomlastName();
-    // corpKyc.fillHighProfileDetails(fullName);
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 6, description = "Verify High Profile Details")
+    public void verifyHighProfileDetails() throws InterruptedException {
+        LoggerUtil.title("High Profile Details test started");
+        String fullName = DataGenerator.generateRandomfirstName() + " " +
+                DataGenerator.generateRandomlastName();
+        corpKyc.fillHighProfileDetails(fullName);
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 7, description = "Verify Transaction Details")
-    // public void verifyTransactionDetails() throws InterruptedException {
-    // LoggerUtil.title("Transaction Details test started");
-    // corpKyc.fillTransactionDetails();
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 7, description = "Verify Transaction Details")
+    public void verifyTransactionDetails() throws InterruptedException {
+        LoggerUtil.title("Transaction Details test started");
+        corpKyc.fillTransactionDetails();
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 8, description = "Verify Cash Flow Details")
-    // public void verifyCashFlowDetails() throws InterruptedException {
-    // LoggerUtil.title("Cash Flow Details test started");
-    // corpKyc.fillCashFlowDetails();
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 8, description = "Verify Cash Flow Details")
+    public void verifyCashFlowDetails() throws InterruptedException {
+        LoggerUtil.title("Cash Flow Details test started");
+        corpKyc.fillCashFlowDetails();
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 9, description = "Verify Exposure Details")
-    // public void verifyExposureDetails() throws InterruptedException {
-    // LoggerUtil.title("Exposure Details test started");
-    // corpKyc.fillExposureDetails();
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 9, description = "Verify Exposure Details")
+    public void verifyExposureDetails() throws InterruptedException {
+        LoggerUtil.title("Exposure Details test started");
+        corpKyc.fillExposureDetails();
+        softAssert.assertAll();
+    }
 
-    // @Test(priority = 10, description = "Verify Employment Details")
-    // public void verifyEmploymentDetails() throws InterruptedException {
-    // LoggerUtil.title("Employment Details test started");
-    // corpKyc.fillEmploymentDetails();
-    // softAssert.assertAll();
-    // }
+    @Test(priority = 10, description = "Verify Employment Details")
+    public void verifyEmploymentDetails() throws InterruptedException {
+        LoggerUtil.title("Employment Details test started");
+        corpKyc.fillEmploymentDetails();
+        softAssert.assertAll();
+    }
 
     @Test(priority = 11, description = "Verify Relationship Master")
     public void verifyRelationshipDetails() throws InterruptedException {
