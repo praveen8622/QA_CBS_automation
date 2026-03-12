@@ -101,14 +101,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    @Test(priority = 10, description = "Verify Employment Details")
-    public void verifyEmploymentDetails() throws InterruptedException {
-        LoggerUtil.title("Employment Details test started");
-        corpKyc.fillEmploymentDetails();
-        softAssert.assertAll();
-    }
-
-    @Test(priority = 11, description = "Verify Relationship Master")
+    @Test(priority = 10, description = "Verify Relationship Master")
     public void verifyRelationshipDetails() throws InterruptedException {
         LoggerUtil.title("Relationship Details test started");
 
@@ -119,7 +112,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    @Test(priority = 12, description = "Verify Relationship Identity")
+    @Test(priority = 11, description = "Verify Relationship Identity")
     public void verifyRelationshipIdentity() throws InterruptedException {
         LoggerUtil.title("Relationship Identity Details test started");
         if (isMemberCustomer) {
@@ -132,7 +125,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    @Test(priority = 13, description = "Verify Relationship Communication")
+    @Test(priority = 12, description = "Verify Relationship Communication")
     public void verifyRelationshipCommunication() throws InterruptedException {
         LoggerUtil.title("Relationship Communication Details test started");
         if (isMemberCustomer) {
@@ -144,7 +137,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    @Test(priority = 14, description = "Verify Relationship Document")
+    @Test(priority = 13, description = "Verify Relationship Document")
     public void verifyRelationshipDocument() throws InterruptedException {
         LoggerUtil.title("Relationship Document Details test started");
 
@@ -157,7 +150,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    @Test(priority = 15, description = "Verify Relationship Address")
+    @Test(priority = 14, description = "Verify Relationship Address")
     public void verifyRelationshipAddress() throws InterruptedException {
         LoggerUtil.title("Relationship Address Details test started");
         if (isMemberCustomer) {
@@ -169,7 +162,7 @@ public class CorporateCustRegTest extends BaseTestSequential {
         softAssert.assertAll();
     }
 
-    @Test(priority = 16, description = "Verify Relationship Photo")
+    @Test(priority = 15, description = "Verify Relationship Photo")
     public void verifyRelationshipPhoto() throws InterruptedException {
         LoggerUtil.title("Relationship Photo test started");
 

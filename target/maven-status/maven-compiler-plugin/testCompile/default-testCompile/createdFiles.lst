@@ -1,5 +1,6 @@
 pages\CustRelationshipIdentityPage.class
 workflows\CorporateCustRegWorkflow.class
+workflows\BaseCustRegWorkflow.class
 pages\LoginPage.class
 utilities\DataGenerator.class
 pages\CustTransactionPage.class

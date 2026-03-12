@@ -225,17 +225,6 @@ public class BaseCustRegWorkflow {
         Thread.sleep(1000);
     }
 
-    public void fillEmploymentDetails() throws InterruptedException {
-        custRegHomePage.navigateToEmploymentTab();
-        Thread.sleep(1000);
-        employmentPage.clickAdd();
-        Thread.sleep(1000);
-        employmentPage.enterEmploymentDetails("Salaried", "Engineer", "Manager", "Tech Corp", "Kathmandu", "1200000");
-        Thread.sleep(1000);
-        employmentPage.clickSave();
-        Thread.sleep(1000);
-    }
-
     public void fillIndividualRelationshipMaster(boolean isMember, String customerCode, String firstName,
             String lastName) throws InterruptedException {
         custRegHomePage.navigateToRelationshipMasterTab();
