@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.asserts.SoftAssert;
 
+import utilities.FileUtil;
 import utilities.LoggerUtil;
 import utilities.WaitUtils;
 
@@ -72,6 +73,7 @@ public class BasePage {
 
 			WebElement input = wait.waitForElementToBeVisible(inputLocator);
 			input.sendKeys(value);
+			Thread.sleep(2000);
 			input.sendKeys(Keys.ENTER);
 		} catch (Exception e) {
 			handleActionException("selectFromReactSelect", containerLocator, e);
@@ -90,28 +92,42 @@ public class BasePage {
 
 	protected void selectDate(By dateInput, By yearDropdown, String year, By monthDropdown, String month,
 			By dayLocator) {
-		click(dateInput);
+		try {
+			click(dateInput);
 
-		Select years = new Select(driver.findElement(yearDropdown));
-		years.selectByVisibleText(year);
+			Select years = new Select(driver.findElement(yearDropdown));
+			years.selectByVisibleText(year);
 
-		Select mnth = new Select(driver.findElement(monthDropdown));
-		mnth.selectByVisibleText(month);
+			Select mnth = new Select(driver.findElement(monthDropdown));
+			mnth.selectByVisibleText(month);
 
-		click(dayLocator);
+			click(dayLocator);
+		} catch (Exception e) {
+			handleActionException("selectDate", dateInput, e);
+		}
 	}
 
 	// ================================
 	// Get element info
 	// ================================
 	protected String getAttributeValue(By locator, String attribute) {
-		WebElement element = wait.waitForElementToBePresent(locator);
-		return element.getAttribute(attribute);
+		try {
+			WebElement element = wait.waitForElementToBePresent(locator);
+			return element.getAttribute(attribute);
+		} catch (Exception e) {
+			handleActionException("getAttributeValue", locator, e);
+			return "";
+		}
 	}
 
 	protected boolean isSelected(By locator) {
-		WebElement element = wait.waitForElementToBePresent(locator);
-		return element.isSelected();
+		try {
+			WebElement element = wait.waitForElementToBePresent(locator);
+			return element.isSelected();
+		} catch (Exception e) {
+			handleActionException("isSelected", locator, e);
+			return false;
+		}
 	}
 
 	// ================================
@@ -138,47 +154,73 @@ public class BasePage {
 		js.executeScript("arguments[0].click();", element);
 	}
 
-	// ================================
+	protected boolean isElementVisible(By locator) {
+		try {
+			return wait.waitForElementToBeVisible(locator).isDisplayed();
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
+	// ================================================================================================
 	// Reusable Assertions
-	// ================================
+	// ================================================================================================
 	protected void assertElementVisible(By locator, String message) {
-		boolean isVisible = wait.waitForElementToBeVisible(locator).isDisplayed();
-		if (softAssert != null) {
-			softAssert.assertTrue(isVisible, message);
-		} else {
-			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Status: "
-					+ (isVisible ? "Visible" : "Not Visible"));
+		try {
+			boolean isVisible = wait.waitForElementToBeVisible(locator).isDisplayed();
+			if (softAssert != null) {
+				softAssert.assertTrue(isVisible, message);
+			} else {
+				LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Status: "
+						+ (isVisible ? "Visible" : "Not Visible"));
+			}
+		} catch (Exception e) {
+			handleActionException("assertElementVisible", locator, e);
 		}
 	}
 
 	protected void assertElementNotVisible(By locator, String message) {
-		boolean isVisible = wait.waitForElementToBeVisible(locator).isDisplayed();
-		if (softAssert != null) {
-			softAssert.assertFalse(isVisible, message);
-		} else {
-			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Status: "
-					+ (isVisible ? "Visible" : "Not Visible"));
+		try {
+			boolean isVisible = wait.waitForElementToBeVisible(locator).isDisplayed();
+			if (softAssert != null) {
+				softAssert.assertFalse(isVisible, message);
+			} else {
+				LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Status: "
+						+ (isVisible ? "Visible" : "Not Visible"));
+			}
+		} catch (Exception e) {
+
+			handleActionException("assertElementNotVisible", locator, e);
 		}
 	}
 
 	protected void assertTextEquals(By locator, String expectedText, String message) {
-		String actualText = wait.waitForElementToBeVisible(locator).getText();
-		if (softAssert != null) {
-			softAssert.assertEquals(actualText, expectedText, message);
-		} else {
-			LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Expected: [" + expectedText
-					+ "], Actual: [" + actualText + "]");
+		try {
+			String actualText = wait.waitForElementToBeVisible(locator).getText();
+			if (softAssert != null) {
+				softAssert.assertEquals(actualText, expectedText, message);
+			} else {
+				LoggerUtil.info("[Assertion skipped - SoftAssert null] " + message + " | Expected: [" + expectedText
+						+ "], Actual: [" + actualText + "]");
+			}
+		} catch (Exception e) {
+			handleActionException("assertTextEquals", locator, e);
 		}
 	}
 
 	protected void assertValueEquals(By locator, String expectedValue, String message) {
-		String actualValue = getAttributeValue(locator, "value");
-		if (softAssert != null) {
-			softAssert.assertEquals(actualValue, expectedValue, message);
-		} else {
-			LoggerUtil
-					.info("[Assertion skipped - SoftAssert not provided] " + message + " | Expected: [" + expectedValue
-							+ "], Actual: [" + actualValue + "]");
+		try {
+			String actualValue = getAttributeValue(locator, "value");
+			if (softAssert != null) {
+				softAssert.assertEquals(actualValue, expectedValue, message);
+			} else {
+				LoggerUtil
+						.info("[Assertion skipped - SoftAssert not provided] " + message + " | Expected: ["
+								+ expectedValue
+								+ "], Actual: [" + actualValue + "]");
+			}
+		} catch (Exception e) {
+			handleActionException("assertValueEquals", locator, e);
 		}
 	}
 
@@ -201,8 +243,12 @@ public class BasePage {
 	// ================================
 	// File Upload
 	// ================================
-	protected void uploadFile(By locator, String filePath) {
+	protected void uploadFile(By locator, String relativePath) {
 		try {
+			// Get absolute path from resources
+			String filePath = FileUtil.getFileFromResources(relativePath);
+			// Validate file exists
+			FileUtil.validateFileExists(filePath);
 			WebElement element = wait.waitForElementToBePresent(locator);
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].removeAttribute('style');", element);

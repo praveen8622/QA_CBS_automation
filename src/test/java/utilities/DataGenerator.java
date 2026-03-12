@@ -47,13 +47,25 @@ public class DataGenerator {
         return generateRandomNumber(3) + "-" + generateRandomNumber(3) + "-" + generateRandomNumber(5);
     }
 
+    public static String generateRandomCompanyName() {
+        return faker.company().name() + " Corp";
+    }
+
+    public static String generateRandomPhoneNumber() {
+        return "98" + generateRandomNumber(8);
+    }
+
     public static String generateRandomfirstName() {
         String firstName = faker.name().firstName();
+        // Remove any non-alphabetic characters
+        firstName = firstName.replaceAll("[^a-zA-Z]", "");
         return firstName;
     }
 
     public static String generateRandomlastName() {
         String lastName = faker.name().lastName();
+        // Remove any non-alphabetic characters
+        lastName = lastName.replaceAll("[^a-zA-Z]", "");
         return lastName;
     }
 

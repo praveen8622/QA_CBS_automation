@@ -43,17 +43,14 @@ public class BaseTestSequential {
         softAssert = new SoftAssert();
     }
 
-    @AfterMethod
-    public void tearDownSoftAssert() {
-        if (softAssert != null) {
-            softAssert.assertAll();
-        }
-    }
-
     @AfterClass
     public void tearDown() {
         if (driver != null) {
             driver.quit();
         }
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }
