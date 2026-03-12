@@ -55,4 +55,5 @@ Remove-Item -Recurse -Force target\allure-results
 
 # Bash/Git Bash
 rm -rf target/allure-results
+
 ```
